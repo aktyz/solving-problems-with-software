@@ -74,7 +74,7 @@ Example: Finding the perimeter of a shape
 
 ### Introduction
 
-In this assignment, you will complete the PerimeterAssignmentRunner class to calculate lots of interesting facts about shapes. This class has been started for you in the BlueJ project called PerimeterAssignmentRunner (this is the same project file that we were looking at in the previous reading, so feel free to open the one you downloaded for the last reading). This project also contains several data files. In addition, you will need to look at the documentation for the Shape class and the Point class, which we went over in the last reading.
+In this assignment, you will complete the PerimeterAssignmentRunner class to calculate lots of interesting facts about shapes. This class has been started for you in the BlueJ project called PerimeterAssignmentRunnerStarterCode (this is the same project file that we were looking at in the previous reading, so feel free to open the one you downloaded for the last reading). This project also contains several data files. In addition, you will need to look at the documentation for the Shape class and the Point class, which we went over in the last reading.
 
 Our goals for this exercise are to:
 
@@ -137,7 +137,7 @@ As always in these activities, call your getLargestX method in the testPerimeter
 
 This is where we’ll leave off with this exercise, but you’ll want to make sure you save all of your project files, as we’ll be using the exact same project files for the next few activities.
 
-## Perimeter Assignment: Part 2
+## Perimeter Assignment: Part 3
 
 ### Introduction
 
