@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/getPerimeterTestFile1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/getPerimeterTestFile2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/PerimeterRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello_unicode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hello_unicode.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +55,37 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Zyta/Desktop/projekt/Duke_Java_Programming/Solving_Problems_With_Software/courserajava.jar",
+    "last_opened_file_path": "C:/Users/Zyta/Desktop/projekt/Duke_Java_Programming/Solving_Problems_With_Software/resources/getPerimeterPattern.PNG",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PerimeterRunner">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week1.Main" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.coursera.duke.java.*" />
+          <option name="PATTERN" value="org.coursera.duke.java.week1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PerimeterRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week1.PerimeterRunner" />
+      <module name="Solving_Problems_With_Software" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.coursera.duke.java.week1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PerimeterRunner" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -94,6 +118,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Initial commit" />

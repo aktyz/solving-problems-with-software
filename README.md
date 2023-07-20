@@ -30,3 +30,42 @@ Mostly introductory videos plus some [programming resources](https://www.dukelea
 > <br><br>
 > [edu.duke.* course specific documentation](https://www.dukelearntoprogram.com/course2/doc/)
 
+-> checkout the notes on your completed [previous course](https://github.com/aktyz/OReilly-the-complete-java)
+
+## Solving Programming: A Seven-Step Approach
+1. Work Example By Hand
+2. Write Down What You Did
+3. Find Patterns
+4. Check By Hand
+5. Translate To Code
+6. Run Test Cases
+7. Debug Failed Test Cases
+
+Example: Finding the perimeter of a shape
+1. Work Example By Hand - Draw any shape you want, mark its points and write their position, calculate the distance of each side of the shape, sum it to get perimeter
+2. Write Down What You Did:<br>
+   a. Found distance from 1st point to 2nd point<br>
+   b. Found distance from 2nd point to 3rd point<br>
+   c. Added two distances, creating its sum<br>
+   d. Found distance from 3rd point to 4th point<br>
+   e. Added new distance to our previous sum<br>
+   f. Found distance from 4th point to 1st point<br>
+   g. Added new distance to our previous sum<br>
+   h. When we arrive back at 1st point, our sum is the answer<br>
+3. Find Patterns, reorder & generalize:<br>
+   a. Found distance from 1st point to 2nd point<br>
+   b. Add new distance to 0, starting point for out sum
+   c. Found distance from 2nd point to 3rd point<br>
+   d. Added new distance to our previous sum<br>
+   e. Found distance from 3rd point to 4th point<br>
+   f. Added new distance to our previous sum<br>
+   g. Found distance from 4th point to 1st point<br>
+   h. Added new distance to our previous sum<br>
+   i. When we arrive back at 1st point, our sum is the answer<br>
+   <br>To arrive at:<br>
+   ![](C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources\getPerimeterPattern.PNG)
+   <br>
+4. Check By Hand - Test in writing on a different instance of a problem, for this example we will switch from trapezoid to triangle
+5. Translate To Code - Have a look at the PerimeterRunner.java class in week1 package
+6. Run Test Cases
+7. Debug Failed Test Cases

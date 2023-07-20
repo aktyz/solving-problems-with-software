@@ -1,4 +1,4 @@
-package org.coursera.duke.java;
+package org.coursera.duke.java.week1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ public class HelloWorld {
 //        }
         Scanner sc;
         try {
-            sc = new Scanner(new File("hello_unicode.txt"));
+            sc = new Scanner(new File("/resources/hello_unicode.txt"));
             while (sc.hasNext()) {
                 System.out.println(sc.nextLine());
             }
