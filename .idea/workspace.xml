@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/getPerimeterTestFile1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/getPerimeterTestFile2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/PerimeterRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/PerimeterAssignmentRunnerCompleted2022.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/PerimeterAssignmentRunnerStarterCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_unicode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hello_unicode.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/getPerimeterPattern.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/resources/week1/getPerimeterPattern.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/getPerimeterTestFile1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/week1/getPerimeterTestFile1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/getPerimeterTestFile2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/week1/getPerimeterTestFile2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/hello_unicode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/week1/hello_unicode.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2SpMSt8nZnoIXZL5tS0LdXkgjuE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources\week1" />
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
@@ -116,7 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689839170561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Seven-step Approach">
+      <created>1689885169047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885169047</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Seven-step Approach">
+      <created>1689885206889</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885206889</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Initial commit" />
+    <MESSAGE value="feat: Seven-step Approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Seven-step Approach" />
   </component>
 </project>
