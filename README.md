@@ -191,3 +191,22 @@ TODO: pass the quiz in the end of the week 1 once enrolled in the course
 
 ## Week 2
 This module begins with a short presentation from Raluca Gordân, an assistant professor in Duke University’s Center for Genomic and Computational Biology, about an important problem genomics scientists encounter regularly: how to identify genes in a strand of DNA. To tackle this problem, you will need to understand strings: series of characters such as letters, digits, punctuation, etc. After learning about Java methods that work with strings, you will be able to find genes within a DNA string as well as tackle other string related problems, such as finding all of the links in a web page. By the end of this module, you will be able to: (1) Use important methods for the Java String class; (2) Use conditionals, for loops, and while loops appropriately in a Java program; (3) Find patterns in the data represented by strings to help develop the algorithm for your program; (4) Understand the importance of designing programs that keep different data processing steps separate; (5) Use the StorageResource iterable for this course to store some data for further processing; and (6) Rely on Java documentation to better understand how to use different Java packages and classes.
+
+### Part 1: Finding a Gene - Using the Simplified Algorithm
+
+This assignment is to write the code from the lesson from scratch by following the steps below. This will help you see if you really understood how to put the code together, and might identify a part that you did not fully understand. If you get stuck, then you can go back and watch the coding videos that go with this lesson again. We recommend you try this with many of the future Java coding examples before starting programming exercises.
+
+Specifically, you should do the following:
+
+1. Create a new Java project named StringsFirstAssignments. You can put all the classes for this programming exercise in this project.
+
+2. Create a new Java Class named Part1. The following methods go in this class.
+
+3. Write the method findSimpleGene that has one String parameter dna, representing a string of DNA. This method does the following:
+- Finds the index position of the start codon “ATG”. If there is no “ATG”, return the empty string.
+- Finds the index position of the first stop codon “TAA” appearing after the “ATG” that was found. If there is no such “TAA”, return the empty string.
+- If the length of the substring between the “ATG” and “TAA” is a multiple of 3, then return the substring that starts with that “ATG” and ends with that “TAA”.
+
+4. Write the void method testSimpleGene that has no parameters. You should create five DNA strings. The strings should have specific test cases, such as: DNA with no “ATG”, DNA with no “TAA”, DNA with no “ATG” or “TAA”, DNA with ATG, TAA and the substring between them is a multiple of 3 (a gene), and DNA with ATG, TAA and the substring between them is not a multiple of 3. For each DNA string you should:
+- Print the DNA string.
+- See if there is a gene by calling findSimpleGene with this string as the parameter. If a gene exists following our algorithm above, then print the gene, otherwise print the empty string.

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/FindGeneSimpleAndTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsFirstAssignmentsPart1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689931699480</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Introduction into analysing human genes">
+      <created>1689948825764</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689948825764</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +219,7 @@
     <MESSAGE value="feat: PerimeterAssignment Part 1 completed" />
     <MESSAGE value="feat: PerimeterAssignment Part 2 completed" />
     <MESSAGE value="feat: PerimeterAssignment Part 3 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: PerimeterAssignment Part 3 completed" />
+    <MESSAGE value="feat: Introduction into analysing human genes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Introduction into analysing human genes" />
   </component>
 </project>
