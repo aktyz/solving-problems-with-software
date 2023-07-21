@@ -38,13 +38,27 @@ public class PerimeterAssignmentRunner {
     }
 
     public double getLargestSide(Shape s) {
-        // Put code here
-        return 0.0;
+        /** AP2.1a */
+        double longestSide = 0.0;
+        Point lastPoint = s.getLastPoint();
+        for(Point p : s.getPoints()) {
+            double currDist = p.distance(lastPoint);
+            if(currDist > longestSide) {
+                longestSide = currDist;
+            }
+            lastPoint = p;
+        }
+        return longestSide;
     }
 
     public double getLargestX(Shape s) {
-        // Put code here
-        return 0.0;
+        /** AP2.2a */
+        double largestX = 0.0;
+        for(Point p : s.getPoints()) {
+            if(p.getX() > largestX)
+                largestX = p.getX();
+        }
+        return largestX;
     }
 
     public double getLargestPerimeterMultipleFiles() {
@@ -67,6 +81,12 @@ public class PerimeterAssignmentRunner {
         /** AP1.2b */
         double averageLength = getAverageLength(s);
         System.out.println("AverageLength = " + averageLength);
+        /** AP2.1b */
+        double largestSide = getLargestSide(s);
+        System.out.println("Largest Side = " + largestSide);
+        /** AP2.2b */
+        double largestX = getLargestX(s);
+        System.out.println("Largest X point = " + largestX);
     }
 
     public void testPerimeterMultipleFiles() {
