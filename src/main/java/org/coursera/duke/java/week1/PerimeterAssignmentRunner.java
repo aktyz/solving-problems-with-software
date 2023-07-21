@@ -62,14 +62,34 @@ public class PerimeterAssignmentRunner {
     }
 
     public double getLargestPerimeterMultipleFiles() {
-        // Put code here
-        return 0.0;
+        /** AP3.1 */
+        double largestPerimeter = 0.0;
+        DirectoryResource dr = new DirectoryResource();
+        for(File f : dr.selectedFiles()) {
+            FileResource fr = new FileResource(f);
+            Shape s = new Shape(fr);
+            double currentPerimeter = getPerimeter(s);
+            if(currentPerimeter > largestPerimeter)
+                largestPerimeter = currentPerimeter;
+        }
+        return largestPerimeter;
     }
 
     public String getFileWithLargestPerimeter() {
-        // Put code here
-        File temp = null;    // replace this code
-        return temp.getName();
+        /** AP3.3 */
+        DirectoryResource dr = new DirectoryResource();
+        double largestPerimeter = 0.0;
+        String largestPerimeterFileName = "";
+        for(File f : dr.selectedFiles()) {
+            FileResource fr = new FileResource(f);
+            Shape s = new Shape(fr);
+            double currentPerimeter = getPerimeter(s);
+            if(currentPerimeter>largestPerimeter) {
+                largestPerimeter = currentPerimeter;
+                largestPerimeterFileName = f.getName();
+            }
+        }
+        return largestPerimeterFileName;
     }
 
     public void testPerimeter () {
@@ -90,19 +110,23 @@ public class PerimeterAssignmentRunner {
     }
 
     public void testPerimeterMultipleFiles() {
-        // Put code here
+        /** AP3.2 */
+        double largestPerimeter = getLargestPerimeterMultipleFiles();
+        System.out.println("Largest perimeter across chosen files is " + largestPerimeter);
     }
 
     public void testFileWithLargestPerimeter() {
-        // Put code here
+        /** AP3.4 */
+        String fileName = getFileWithLargestPerimeter();
+        System.out.println("Name of the file containing largest Perimeter: " + fileName);
     }
 
     // This method creates a triangle that you can use to test your other methods
     public void triangle(){
         Shape triangle = new Shape();
-        triangle.addPoint(new edu.duke.Point(0,0));
-        triangle.addPoint(new edu.duke.Point(6,0));
-        triangle.addPoint(new edu.duke.Point(3,6));
+        triangle.addPoint(new Point(0,0));
+        triangle.addPoint(new Point(6,0));
+        triangle.addPoint(new Point(3,6));
         for (Point p : triangle.getPoints()){
             System.out.println(p);
         }
@@ -121,6 +145,8 @@ public class PerimeterAssignmentRunner {
     public static void main (String[] args) {
         PerimeterAssignmentRunner pr = new PerimeterAssignmentRunner();
         pr.testPerimeter();
+        pr.testPerimeterMultipleFiles();
+        pr.testFileWithLargestPerimeter();
     }
 }
 
