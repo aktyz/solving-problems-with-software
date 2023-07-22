@@ -2,8 +2,9 @@ package org.coursera.duke.java.week2;
 
 public class Main {
     public static void main(String[] args) {
-        StringsFirstAssignmentsPart2 myClass = new StringsFirstAssignmentsPart2();
+        StringsFirstAssignmentsPart3 myClass = new StringsFirstAssignmentsPart3();
 
-        myClass.testSimpleGene();
+        myClass.testTwoOccurrences();
+        myClass.testLastPart();
     }
 }

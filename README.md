@@ -190,7 +190,7 @@ Again, don’t forget to call testFileWithLargestPerimeter in the main method, o
 TODO: pass the quiz in the end of the week 1 once enrolled in the course
 
 ## Week 2
-This module begins with a short presentation from Raluca Gordân, an assistant professor in Duke University’s Center for Genomic and Computational Biology, about an important problem genomics scientists encounter regularly: how to identify genes in a strand of DNA. To tackle this problem, you will need to understand strings: series of characters such as letters, digits, punctuation, etc. After learning about Java methods that work with strings, you will be able to find genes within a DNA string as well as tackle other string related problems, such as finding all of the links in a web page. By the end of this module, you will be able to: (1) Use important methods for the Java String class; (2) Use conditionals, for loops, and while loops appropriately in a Java program; (3) Find patterns in the data represented by strings to help develop the algorithm for your program; (4) Understand the importance of designing programs that keep different data processing steps separate; (5) Use the StorageResource iterable for this course to store some data for further processing; and (6) Rely on Java documentation to better understand how to use different Java packages and classes.
+This module begins with a short presentation from Raluca Gordân, an assistant professor in Duke University’s Center for Genomic and Computational Biology, about an important problem genomics scientists encounter regularly: how to identify genes in a strand of DNA. To tackle this problem, you will need to understand strings: series of characters such as letters, digits, punctuation, etc. After learning about Java methods that work with strings, you will be able to find genes within a DNA string as well as tackle other string related problems, such as finding all the links in a web page. By the end of this module, you will be able to: (1) Use important methods for the Java String class; (2) Use conditionals, for loops, and while loops appropriately in a Java program; (3) Find patterns in the data represented by strings to help develop the algorithm for your program; (4) Understand the importance of designing programs that keep different data processing steps separate; (5) Use the StorageResource iterable for this course to store some data for further processing; and (6) Rely on Java documentation to better understand how to use different Java packages and classes.
 
 ### Part 1: Finding a Gene - Using the Simplified Algorithm
 
@@ -224,3 +224,22 @@ Specifically, you should do the following:
 3. The method findSimpleGene has one parameter for the DNA string named dna. Modify findSimpleGene to add two additional parameters, one named startCodon for the start codon and one named stopCodon for the stop codon. What additional changes do you need to make for the program to compile? After making all changes, run your program to check that you get the same output as before.
 
 4. Modify the findSimpleGene method to work with DNA strings that are either all uppercase letters such as “ATGGGTTAAGTC” or all lowercase letters such as “gatgctataat”. Calling findSimpleGene with “ATGGGTTAAGTC” should return the answer with uppercase letters, the gene “ATGGGTTAA”, and calling findSimpleGene with  “gatgctataat” should return the answer with lowercase letters, the gene “atgctataa”. HINT: there are two string methods toUpperCase() and toLowerCase(). If dna is the string “ATGTAA” then dna.toLowerCase() results in the string “atgtaa”.
+
+### Part 3: Problem-Solving with Strings
+
+This assignment will give you additional practice using String methods. You will write two methods to solve some problems using strings and a third method to test these two methods.
+
+Specifically, you should do the following:
+
+1. Create a new Java Class named Part3 in the StringsFirstAssignments project. Put the following methods in this class.
+
+2. Write the method named twoOccurrences that has two String parameters named stringa and stringb. This method returns true if stringa appears at least twice in stringb, otherwise it returns false. For example, the call twoOccurrences(“by”, “A story by Abby Long”) returns true as there are two occurrences of “by”, the call twoOccurrences(“a”, “banana”) returns true as there are three occurrences of “a” so “a” occurs at least twice, and the call twoOccurrences(“atg”, “ctgtatgta”) returns false as there is only one occurrence of “atg”.
+
+3. Write the void method named testing that has no parameters. This method should call twoOccurrences on several pairs of strings and print the strings and the result of calling twoOccurrences (true or false) for each pair. Be sure to test examples that should result in true and examples that should result in false.
+
+4. Write the method named lastPart that has two String parameters named stringa and stringb. This method finds the first occurrence of stringa in stringb, and returns the part of stringb that follows stringa.  If stringa does not occur in stringb, then return stringb. For example, the call lastPart(“an”, “banana”) returns the string “ana”, the part of the string after the first “an”. The call lastPart(“zoo”, “forest”) returns the string “forest” since “zoo” does not appear in that word.
+
+5. Add code to the method testing to call the method lastPart with several pairs of strings. For each call print the strings passed in and the result. For example, the output for the two calls above might be:
+- The part of the string after an in banana is ana.
+- The part of the string after zoo in forest is forest.
+
