@@ -2,8 +2,6 @@ package org.coursera.duke.java.week2;
 
 public class FindGeneSimpleAndTest {
     public String findGeneSimple (String dna, String startGenome, String endGenome) {
-        // start codon is "ATG"
-        // end codon is "TAA"
         String result = "";
         int startIndex = dna.indexOf("ATG");
         if(startIndex == -1) {
