@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsFirstAssignmentsPart3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsFirstAssignmentsPart4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2SpMSt8nZnoIXZL5tS0LdXkgjuE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,7 +65,7 @@
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.coursera.duke.java.week2.Main">
+  <component name="RunManager" selected="Application.StringsFirstAssignmentsPart4">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week1.Main" />
       <module name="Solving_Problems_With_Software" />
@@ -104,6 +105,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringsFirstAssignmentsPart4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsFirstAssignmentsPart4" />
+      <module name="Solving_Problems_With_Software" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.coursera.duke.java.week2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="org.coursera.duke.java.week2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.Main" />
       <module name="Solving_Problems_With_Software" />
@@ -119,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringsFirstAssignmentsPart4" />
         <item itemvalue="Application.org.coursera.duke.java.week2.Main" />
         <item itemvalue="Application.PerimeterAssignmentRunner" />
         <item itemvalue="Application.PerimeterRunner" />
@@ -205,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690024015193</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: Part 3: Finding a Gene Completed">
+      <created>1690025739329</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690025739329</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +262,7 @@
     <MESSAGE value="feat: PerimeterAssignment Part 3 completed" />
     <MESSAGE value="feat: Introduction into analysing human genes" />
     <MESSAGE value="Part 2: Finding a Gene Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Part 2: Finding a Gene Completed" />
+    <MESSAGE value="feat: Part 3: Finding a Gene Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Part 3: Finding a Gene Completed" />
   </component>
 </project>
