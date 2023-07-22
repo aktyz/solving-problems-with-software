@@ -1,11 +1,11 @@
 package org.coursera.duke.java.week2;
 
 public class FindGeneWhileAndTest {
-    public static String findGeneWhile(String dna, String startGenome, String stopGenome) {
+    public static String findGeneWhile(String dna, String startCodon, String stopCodon) {
         // Find first occurrence of "ATG" and call its index startIndex
-        int startIndex = dna.indexOf(startGenome);
+        int startIndex = dna.indexOf(startCodon);
         // Find the "TAA" starting from (startIndex + 3), call it stopIndex
-        int currentIndex = dna.indexOf(stopGenome, startIndex + 3);
+        int currentIndex = dna.indexOf(stopCodon, startIndex + 3);
         // As long as currentIndex is not equal to -1
         while(currentIndex != -1) {
             // Check if (currentIndex - startIndex)%3 == 0
@@ -14,7 +14,7 @@ public class FindGeneWhileAndTest {
                 return dna.substring(startIndex, currentIndex + 3);
             } else {
                 // If not, update currentIndex to the next "TAA" occurrence
-                currentIndex = dna.indexOf(stopGenome, currentIndex + 1);
+                currentIndex = dna.indexOf(stopCodon, currentIndex + 1);
             }
         }
         // Your answer is the empty string
