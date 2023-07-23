@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsSecondAssignmentsPart1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +66,7 @@
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AllGenes">
+  <component name="RunManager" selected="Application.StringsSecondAssignmentsPart1">
     <configuration name="AllGenes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.AllGenes" />
       <module name="Solving_Problems_With_Software" />
@@ -91,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PerimeterAssignmentRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week1.PerimeterAssignmentRunner" />
+    <configuration name="StringsFirstAssignmentsPart4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsFirstAssignmentsPart4" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.coursera.duke.java.week1.*" />
+          <option name="PATTERN" value="org.coursera.duke.java.week2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,8 +106,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsFirstAssignmentsPart4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsFirstAssignmentsPart4" />
+    <configuration name="StringsSecondAssignmentsPart1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsSecondAssignmentsPart1" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -132,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringsSecondAssignmentsPart1" />
         <item itemvalue="Application.AllGenes" />
         <item itemvalue="Application.FindGeneWhileAndTest" />
         <item itemvalue="Application.StringsFirstAssignmentsPart4" />
         <item itemvalue="Application.org.coursera.duke.java.week2.Main" />
-        <item itemvalue="Application.PerimeterAssignmentRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690061241916</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: Print all genes for a given string">
+      <created>1690103872573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690103872573</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,6 +322,7 @@
     <MESSAGE value="feat: Part 4: Finding a Gene Completed" />
     <MESSAGE value="feat: Finding valid gene Strings" />
     <MESSAGE value="feat: Finding valid gene Strings with different stopCodons" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Finding valid gene Strings with different stopCodons" />
+    <MESSAGE value="feat: Print all genes for a given string" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Print all genes for a given string" />
   </component>
 </project>
