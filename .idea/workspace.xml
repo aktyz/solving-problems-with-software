@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsThirdAssignmentsPart1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2dc56a96-2122-4d8a-bd54-f07a8fbe214e" />
+        <option name="url" value="https://github.com/aktyz/solving-problems-with-software.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,7 +78,7 @@
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.StringsThirdAssignmentsPart1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.Main" />
       <module name="Solving_Problems_With_Software" />
@@ -117,8 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsSecondAssignmentsPart3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsSecondAssignmentsPart3" />
+    <configuration name="StringsThirdAssignmentsPart1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsThirdAssignmentsPart1" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -132,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringsThirdAssignmentsPart1" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StringsFirstAssignmentsPart3" />
         <item itemvalue="Application.QuizHelperCode" />
         <item itemvalue="Application.StringsSecondAssignmentsPart1" />
-        <item itemvalue="Application.StringsSecondAssignmentsPart3" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690202312130</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: StorageResource example">
+      <created>1690202858574</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1690202858574</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +377,7 @@
     <MESSAGE value="feat: Part 3: Finding many Genes Completed" />
     <MESSAGE value="feat: Debugging Code" />
     <MESSAGE value="chore: Week2 files cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: Week2 files cleanup" />
+    <MESSAGE value="feat: StorageResource example" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: StorageResource example" />
   </component>
 </project>

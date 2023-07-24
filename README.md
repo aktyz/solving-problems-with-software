@@ -325,3 +325,16 @@ Specifically, you should do the following:
 
 4. Write the void method named testCountGenes that has no parameters.  This method calls countGenes with many example strings and prints the result for each. You should create several examples with different numbers of genes to test your code.
 
+### Part 1: Storing All Genes
+
+This assignment is to write the code from the lesson to use a StorageResource to store the genes you find instead of printing them out. This will help you see if you really understood how to put the code together, and might identify a part that you did not fully understand. If you get stuck, then you can go back and watch the coding videos that go with this lesson again.
+
+Specifically, you should do the following:
+
+1. Create a new Java project named StringsThirdAssignments. You can put all the classes for this programming exercise in this project.
+
+2. Create a new Java Class named Part1. Copy and paste the code from your Part1 class in your StringsSecondAssignments project into this class.
+
+3. Make a copy of the printAllGenes method called getAllGenes. Instead of printing the genes found, this method should create and return a StorageResource containing the genes found. Remember to import the edu.duke libraries otherwise you will get an error message cannot find the class StorageResource.
+
+4. Make sure you test your getAllGenes method.
