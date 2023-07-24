@@ -310,3 +310,18 @@ Specifically, you should do the following:
 2. Write the method named howMany that has two String parameters named stringA and stringB. This method returns an integer indicating how many times stringA appears in stringB, where each occurrence of stringA must not overlap with another occurrence of it. For example, the call howMany(“GAA”, “ATGAACGAATTGAATC”) returns 3 as GAA occurs 3 times. The call howMany(“AA”, “ATAAAA”) returns 2. Note that the AA’s found cannot overlap.
 
 3. Write the void method testHowMany has no parameters. Add code in here to call howMany with several examples and print the results. Think carefully about what types of examples would be good to test to make sure your method works correctly.
+
+### Part 3: How Many Genes?
+
+Write a program to count how many genes are in a strand of DNA.
+
+Specifically, you should do the following:
+
+1. Create a new Java Class named Part3 in the StringsSecondAssignments project. Put the following methods in this class.
+
+2. Copy your methods from Part1 to find one gene and print all genes.
+
+3. Write the method named countGenes that has a String parameter named dna representing a string of DNA. This method returns the number of genes found in dna. For example the call countGenes(“ATGTAAGATGCCCTAGT”) returns 2, finding the gene ATGTAA first and then the gene ATGCCCTAG. Hint: This is very similar to finding all genes and printing them, except that instead of printing all the genes you will count them.
+
+4. Write the void method named testCountGenes that has no parameters.  This method calls countGenes with many example strings and prints the result for each. You should create several examples with different numbers of genes to test your code.
+

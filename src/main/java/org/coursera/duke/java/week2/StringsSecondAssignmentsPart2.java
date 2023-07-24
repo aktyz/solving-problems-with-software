@@ -60,6 +60,9 @@ public class StringsSecondAssignmentsPart2 {
         System.out.println("testing howMany() completed");
     }
     public static void main(String[] args) {
+        // Quiz use case:
+        int result = howMany("", "");
+        System.out.println("Number of occurrences in your case: " + result);
         testHowMany();
     }
 }
