@@ -233,11 +233,11 @@ Specifically, you should do the following:
 
 1. Create a new Java Class named Part3 in the StringsFirstAssignments project. Put the following methods in this class.
 
-2. Write the method named twoOccurrences that has two String parameters named stringa and stringb. This method returns true if stringa appears at least twice in stringb, otherwise it returns false. For example, the call twoOccurrences(“by”, “A story by Abby Long”) returns true as there are two occurrences of “by”, the call twoOccurrences(“a”, “banana”) returns true as there are three occurrences of “a” so “a” occurs at least twice, and the call twoOccurrences(“atg”, “ctgtatgta”) returns false as there is only one occurrence of “atg”.
+2. Write the method named twoOccurrences that has two String parameters named stringA and stringB. This method returns true if stringA appears at least twice in stringB, otherwise it returns false. For example, the call twoOccurrences(“by”, “A story by Abby Long”) returns true as there are two occurrences of “by”, the call twoOccurrences(“a”, “banana”) returns true as there are three occurrences of “a” so “a” occurs at least twice, and the call twoOccurrences(“atg”, “ctgtatgta”) returns false as there is only one occurrence of “atg”.
 
 3. Write the void method named testing that has no parameters. This method should call twoOccurrences on several pairs of strings and print the strings and the result of calling twoOccurrences (true or false) for each pair. Be sure to test examples that should result in true and examples that should result in false.
 
-4. Write the method named lastPart that has two String parameters named stringa and stringb. This method finds the first occurrence of stringa in stringb, and returns the part of stringb that follows stringa.  If stringa does not occur in stringb, then return stringb. For example, the call lastPart(“an”, “banana”) returns the string “ana”, the part of the string after the first “an”. The call lastPart(“zoo”, “forest”) returns the string “forest” since “zoo” does not appear in that word.
+4. Write the method named lastPart that has two String parameters named stringA and stringB. This method finds the first occurrence of stringA in stringB, and returns the part of stringB that follows stringA.  If stringA does not occur in stringB, then return stringB. For example, the call lastPart(“an”, “banana”) returns the string “ana”, the part of the string after the first “an”. The call lastPart(“zoo”, “forest”) returns the string “forest” since “zoo” does not appear in that word.
 
 5. Add code to the method testing to call the method lastPart with several pairs of strings. For each call print the strings passed in and the result. For example, the output for the two calls above might be:
 - The part of the string after an in banana is ana.
@@ -297,4 +297,16 @@ Specifically, you should do the following:
 
    Calculate the gene by sending this DNA string as an argument to findGene. If a gene exists following our algorithm above, then print the gene, otherwise print the empty string.
 
-7. Write the void method printAllGenes that has one String parameter dna, representing a string of DNA. In this method you should repeatedly find genes and print each one until there are no more genes. Hint: remember you learned a while(true) loop and break.   
+7. Write the void method printAllGenes that has one String parameter dna, representing a string of DNA. In this method you should repeatedly find genes and print each one until there are no more genes. Hint: remember you learned a while(true) loop and break.
+
+### Part 2: HowMany - Finding Multiple Occurrences
+
+This assignment will write a method to determine how many occurrences of a string appear in another string.
+
+Specifically, you should do the following:
+
+1. Create a new Java Class named Part2 in the StringsSecondAssignments project.
+
+2. Write the method named howMany that has two String parameters named stringA and stringB. This method returns an integer indicating how many times stringA appears in stringB, where each occurrence of stringA must not overlap with another occurrence of it. For example, the call howMany(“GAA”, “ATGAACGAATTGAATC”) returns 3 as GAA occurs 3 times. The call howMany(“AA”, “ATAAAA”) returns 2. Note that the AA’s found cannot overlap.
+
+3. Write the void method testHowMany has no parameters. Add code in here to call howMany with several examples and print the results. Think carefully about what types of examples would be good to test to make sure your method works correctly.
