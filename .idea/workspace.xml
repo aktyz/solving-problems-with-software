@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsThirdAssignmentsPart1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsThirdAssignments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsThirdAssignmentsPart1.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,8 +132,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsThirdAssignmentsPart1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsThirdAssignmentsPart1" />
+    <configuration name="StringsThirdAssignments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsThirdAssignments" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -310,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690202858574</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: Part 1: Store All Genes">
+      <created>1690204998976</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690204998976</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,6 +386,7 @@
     <MESSAGE value="feat: Debugging Code" />
     <MESSAGE value="chore: Week2 files cleanup" />
     <MESSAGE value="feat: StorageResource example" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: StorageResource example" />
+    <MESSAGE value="feat: Part 1: Store All Genes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Part 1: Store All Genes" />
   </component>
 </project>
