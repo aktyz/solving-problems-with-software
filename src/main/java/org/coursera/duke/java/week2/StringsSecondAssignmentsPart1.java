@@ -85,7 +85,7 @@ public class StringsSecondAssignmentsPart1 {
 
     public static void main(String[] args) {
         // Quiz use case:
-        String dna = "";
+        String dna = "AATGCTAACTAGCTGACTAAT";
         System.out.println("Printing all genes for string: " + dna);
         printAllGenes(dna);
         testFindStopCodon();
