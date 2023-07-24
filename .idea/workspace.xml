@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StringsFirstAssignmentsPart3">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.Main" />
       <module name="Solving_Problems_With_Software" />
@@ -132,8 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StringsFirstAssignmentsPart3" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StringsFirstAssignmentsPart3" />
         <item itemvalue="Application.QuizHelperCode" />
         <item itemvalue="Application.StringsSecondAssignmentsPart1" />
         <item itemvalue="Application.StringsSecondAssignmentsPart3" />
@@ -282,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690197502887</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="chore: Week2 files cleanup">
+      <created>1690202312130</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1690202312130</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,6 +355,7 @@
     <MESSAGE value="feat: Part 2: Finding many Genes Completed" />
     <MESSAGE value="feat: Part 3: Finding many Genes Completed" />
     <MESSAGE value="feat: Debugging Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Debugging Code" />
+    <MESSAGE value="chore: Week2 files cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Week2 files cleanup" />
   </component>
 </project>

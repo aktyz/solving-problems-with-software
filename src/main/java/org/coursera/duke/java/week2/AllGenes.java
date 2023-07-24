@@ -1,5 +1,7 @@
 package org.coursera.duke.java.week2;
 
+import edu.duke.StorageResource;
+
 public class AllGenes {
     public static int findStopCodon(String dna, int startIndex, String stopCodon) {
         int currentIndex = dna.indexOf(stopCodon, startIndex + 3);
@@ -36,6 +38,26 @@ public class AllGenes {
             if(geneFound.isEmpty()) break;
             System.out.println(geneFound);
             startIndex = dna.indexOf(geneFound, startIndex) + geneFound.length();
+        }
+    }
+
+    public static StorageResource getAllGenes(String dna) {
+        StorageResource geneList = new StorageResource();
+        int startIndex = 0;
+        while( true ) {
+            String geneFound = findGene(dna, startIndex);
+            if(geneFound.isEmpty()) break;
+            geneList.add(geneFound);
+            startIndex = dna.indexOf(geneFound, startIndex) + geneFound.length();
+        }
+        return geneList;
+    }
+
+    public static void testGetAllGenes() {
+        String dna = "ATGATCATAAGAAGATAATAGAGGGCCATGTAA";
+        StorageResource geneList = getAllGenes(dna);
+        for(String gene : geneList.data()) {
+            System.out.println(gene);
         }
     }
 
@@ -91,8 +113,6 @@ public class AllGenes {
     }
 
     public static void runAllTests() {
-        testFindStopCodon();
-        testFindGene();
-        testPrintAllGenes();
+        testGetAllGenes();
     }
 }
