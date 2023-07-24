@@ -1,7 +1,7 @@
 package org.coursera.duke.java.week2;
 
 public class FindGeneSimpleAndTest {
-    public String findGeneSimple (String dna, String startGenome, String endGenome) {
+    public static String findGeneSimple (String dna, String startGenome, String endGenome) {
         String result = "";
         int startIndex = dna.indexOf("ATG");
         if(startIndex == -1) {
@@ -15,7 +15,7 @@ public class FindGeneSimpleAndTest {
         return result;
     }
 
-    public void testFindGeneSimple() {
+    public static void testFindGeneSimple() {
         //System.out.println(findGeneSimple("AAATGCCCTAACTAGATTAAGAAACC", "ATG", "TAA"));
         String dna = "AATGCGTAATATGGT";
         System.out.println("DNA strand is " + dna);
@@ -58,5 +58,9 @@ public class FindGeneSimpleAndTest {
 //        gene = findGeneSimple(dna, "ATG", "TAA");
 //        System.out.println("Gene is " + gene);
 //        System.out.println("Gene is atgctataa");
+    }
+
+    public static void main(String[] args) {
+        testFindGeneSimple();
     }
 }

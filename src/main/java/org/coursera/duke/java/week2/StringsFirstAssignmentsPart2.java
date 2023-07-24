@@ -1,7 +1,7 @@
 package org.coursera.duke.java.week2;
 
 public class StringsFirstAssignmentsPart2 {
-    public String findSimpleGene(String dna, String startCodon, String stopCodon) {
+    public static String findSimpleGene(String dna, String startCodon, String stopCodon) {
         int startIndex = dna.toUpperCase().indexOf(startCodon.toUpperCase());
         if(startIndex == -1) {
             return "";
@@ -17,7 +17,7 @@ public class StringsFirstAssignmentsPart2 {
         else return "";
     }
 
-    public void testSimpleGene() {
+    public static void testSimpleGene() {
         String dna = "TAATAA";
         System.out.println("String is: " + dna);
         System.out.println("Gene found: " + findSimpleGene(dna, "ATG", "TAA"));
@@ -41,5 +41,9 @@ public class StringsFirstAssignmentsPart2 {
         dna = "gatgctataat";
         System.out.println("String is: " + dna);
         System.out.println("Gene found: " + findSimpleGene(dna, "ATG", "TAA"));
+    }
+
+    public static void main(String[] args) {
+        testSimpleGene();
     }
 }

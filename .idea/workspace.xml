@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/QuizHelperCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsSecondAssignmentsPart1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/StringsSecondAssignmentsPart1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/AllGenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +64,9 @@
       <recent name="C:\Users\Zyta\Desktop\projekt\Duke_Java_Programming\Solving_Problems_With_Software\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuizHelperCode">
-    <configuration name="AllGenes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.AllGenes" />
+  <component name="RunManager" selected="Application.StringsFirstAssignmentsPart3">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.Main" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +91,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsSecondAssignmentsPart1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsSecondAssignmentsPart1" />
+    <configuration name="StringsFirstAssignmentsPart3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsFirstAssignmentsPart3" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -105,8 +104,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsSecondAssignmentsPart2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsSecondAssignmentsPart2" />
+    <configuration name="StringsSecondAssignmentsPart1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsSecondAssignmentsPart1" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
@@ -133,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringsFirstAssignmentsPart3" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.QuizHelperCode" />
         <item itemvalue="Application.StringsSecondAssignmentsPart1" />
         <item itemvalue="Application.StringsSecondAssignmentsPart3" />
-        <item itemvalue="Application.StringsSecondAssignmentsPart2" />
-        <item itemvalue="Application.AllGenes" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690189067534</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: Debugging Code">
+      <created>1690197502887</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1690197502887</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,6 +347,7 @@
     <MESSAGE value="feat: Part 1: Finding many Genes Completed" />
     <MESSAGE value="feat: Part 2: Finding many Genes Completed" />
     <MESSAGE value="feat: Part 3: Finding many Genes Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Part 3: Finding many Genes Completed" />
+    <MESSAGE value="feat: Debugging Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Debugging Code" />
   </component>
 </project>
