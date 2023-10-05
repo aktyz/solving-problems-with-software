@@ -43,8 +43,10 @@ public class StringsThirdAssignments {
         int countLength = 0;
         int countCGRatio = 0;
         int longestLength = 0;
+        int numberOfGenesInSR = 0;
         for(String s : sr.data()) {
             System.out.println();
+            numberOfGenesInSR++;
             System.out.println("String longer than 60 chars:");
             if(s.length() > 60) {
                 countLength ++;
@@ -58,6 +60,7 @@ public class StringsThirdAssignments {
             if(s.length() > longestLength) longestLength = s.length();
         }
         System.out.println();
+        System.out.println("Number of genes found: " + numberOfGenesInSR);
         System.out.println("Number of strings longer than 60 chars: " + countLength);
         System.out.println("Number of strings with C-G-ratio higher than 0.35: " + countCGRatio);
         System.out.println("Length of longest gene in the file: " + longestLength);
