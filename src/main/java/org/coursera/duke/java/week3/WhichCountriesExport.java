@@ -77,10 +77,38 @@ public class WhichCountriesExport {
     public static void getListExportersTwoProducts(String exportItem1, String exportItem2, FileResource fr) {
         listExportersTwoProducts(tester(fr), exportItem1, exportItem2);
     }
+
+    public static void numberOfExporters(CSVParser parser, String exportItem) {
+        int numberOfExporters = 0;
+        for(CSVRecord line : parser) {
+            String countryExportsLine = line.get("Exports");
+            ArrayList<String> countryExportItems = new ArrayList<String>();
+            int beginIndex = 0;
+            int endIndex = countryExportsLine.indexOf(",");
+
+            while(endIndex < countryExportsLine.length()) {
+                countryExportItems.add(countryExportsLine.substring(beginIndex, endIndex));
+                beginIndex = endIndex + 1;
+                endIndex = countryExportsLine.indexOf(",", endIndex + 1);
+                if(endIndex == -1) endIndex = countryExportsLine.length();
+            }
+
+            for(String good : countryExportItems) {
+                if(good.equals(exportItem)) numberOfExporters ++;
+            }
+        }
+        System.out.println(numberOfExporters);
+    }
+
+    public static void getNumberOfExporters(String exportItem, FileResource fr) {
+        numberOfExporters(tester(fr), exportItem);
+    }
     public static void main(String[] args) {
         FileResource fr = new FileResource();
         getExportersOf("coffee", fr);
         getCountryInfo("Peru", fr);
         getCountryInfo("Poland", fr);
+        getListExportersTwoProducts("gold", "diamonds", fr);
+        getNumberOfExporters("gold", fr);
     }
 }
