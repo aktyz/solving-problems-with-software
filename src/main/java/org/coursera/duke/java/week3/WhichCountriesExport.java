@@ -4,6 +4,8 @@ import edu.duke.FileResource;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
+import java.util.ArrayList;
+
 public class WhichCountriesExport {
 
     public static CSVParser tester(FileResource fr) {
@@ -46,6 +48,35 @@ public class WhichCountriesExport {
         countryInfo(tester(fr), country);
     }
 
+    public static void listExportersTwoProducts(CSVParser parser, String exportItem1, String exportItem2) {
+        ArrayList<String> exportingCountries = new ArrayList<>();
+        for(CSVRecord line : parser) {
+            String dataCountry = line.get("Country");
+            String countryExportsLine = line.get("Exports");
+            int index = 0;
+            while(index < countryExportsLine.length()) {
+                String exportGood;
+                int commaIndex = countryExportsLine.indexOf(",", index);
+                if (commaIndex == -1) {
+                    exportGood = countryExportsLine.substring(index, countryExportsLine.length());
+                    index = countryExportsLine.length();
+                } else {
+                    exportGood = countryExportsLine.substring(index, commaIndex);
+                    index = countryExportsLine.indexOf(",", commaIndex) + 1;
+                }
+                if(exportGood.equals(exportItem1) || exportGood.equals(exportItem2)) {
+                    exportingCountries.add(dataCountry);
+                }
+            }
+        }
+        for(String country : exportingCountries) {
+            System.out.println(country);
+        }
+    }
+
+    public static void getListExportersTwoProducts(String exportItem1, String exportItem2, FileResource fr) {
+        listExportersTwoProducts(tester(fr), exportItem1, exportItem2);
+    }
     public static void main(String[] args) {
         FileResource fr = new FileResource();
         getExportersOf("coffee", fr);

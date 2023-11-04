@@ -366,3 +366,49 @@ String dna = fr.asString();
 Modify your processGenes method so that it prints all the Strings that are longer than 60 characters and prints the number of Strings that are longer than 60 characters (you do not need to make changes to the rest of the method).
 
 Modify the method testProcessGenes to call processGenes with a StorageResource of the genes found in the file brca1line.fa.
+
+## Week 3
+CSV Files and Basic Statistics in Java Module
+
+A common format for storing tabular data (any data organized into columns and rows) is in comma separated values (CSV) files. In this module, you will learn how to analyze and manipulate data from multiple CSV data files using a powerful open-source software package: Apache Commons CSV. Using this library will empower you to solve problems that could prove too complex to solve with a spreadsheet.
+
+[Apache Commons CSV Library Documentation](https://commons.apache.org/proper/commons-csv/)
+[Remainder on mapping external library in IntelliJ as module rather than downloading through POM.](https://stackoverflow.com/questions/34445631/project-hierarchy-idea-rather-then-bluej)
+
+### Programming exercise: Parsing Export Data
+
+The CSV file exportdata.csv has information on the export products of countries. In particular it has three column headers labeled Country, Exports, and Value (dollars):
+- The Country column represents a country from the world,
+- the Exports column is a list of export items for a country,
+- and the Value (dollars) column is the dollar amount in millions of their exports in the format of a dollar sign, followed by an integer number with a comma separator every three digits from the right. An example of such a value might be “$400,000,000”.
+
+The CSV file exports_small.csv is a smaller version of the file above with the same columns that you may find helpful in testing your program. We show a picture of it here.
+
+Exercise requirements:
+- [x] Write a method named `tester` that will create your CSVParser and call each of the methods below in parts 2, 3, 4, and 5. You would start your code with:
+   ```java
+      FileResource fr = new FileResource();
+      CSVParser parser = fr.getCSVParser();
+   ```
+   Each time you want to use the parser with another method, you will need to reset the parser by calling ```fr.getCSVParser()``` again to get a new parser.
+- [x] Write a method named `countryInfo` that has two parameters, `parser` is a `CSVParser` and `country` is a `String`. This method returns a string of information about the country or returns `“NOT FOUND”` if there is no information about the country. The format of the string returned is the country, followed by “: “, followed by a list of the countries’ exports, followed by “: “, followed by the countries export value. For example, using the file `exports_small.csv` and the country Germany, the program returns the string:
+   ```java
+   Germany: motor vehicles, machinery, chemicals: $1,547,000,000,000
+   ```
+- [x] Write a void method named `listExportersTwoProducts` that has three parameters, `parser` is a `CSVParser`, `exportItem1` is a `String` and `exportItem2` is a `String`. This method prints the names of all the countries that have both `exportItem1` and `exportItem2` as export items. For example, using the file `exports_small.csv`, this method called with the items “gold” and “diamonds” would print the countries:
+   ```java
+   Namibia
+   South Africa
+   ```
+- [ ] Write a method named numberOfExporters, which has two parameters, parser is a CSVParser, and exportItem is a String. This method returns the number of countries that export exportItem. For example, using the file exports_small.csv, this method called with the item “gold” would return 3.
+- [ ] Write a void method named bigExporters that has two parameters, parser is a CSVParser, and amount is a String in the format of a dollar sign, followed by an integer number with a comma separator every three digits from the right. An example of such a string might be “$400,000,000”. This method prints the names of countries and their Value amount for all countries whose Value (dollars) string is longer than the amount string. You do not need to parse either string value as an integer, just compare the lengths of the strings. For example, if bigExporters is called with the file exports_small.csv and amount with the string $999,999,999, then this method would print eight countries and their export values shown here:
+   ```java
+   Germany $1,547,000,000,000
+   Macedonia $3,421,000,000
+   Malawi $1,332,000,000
+   Malaysia $231,300,000,000
+   Namibia $4,597,000,000
+   Peru $36,430,000,000
+   South Africa $97,900,000,000
+   United States $1,610,000,000,000
+   ```
