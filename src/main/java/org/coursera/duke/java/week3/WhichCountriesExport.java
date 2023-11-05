@@ -112,6 +112,20 @@ public class WhichCountriesExport {
     public static void getNumberOfExporters(String exportItem, FileResource fr) {
         numberOfExporters(tester(fr), exportItem);
     }
+
+    private static void bigExporters(CSVParser parser, String amount) {
+        for(CSVRecord line : parser) {
+            String countryExportsValue = line.get("Value (dollars)");
+            if(countryExportsValue.length() > amount.length())
+                System.out.println(line.get("Country") + " " + countryExportsValue);
+        }
+        System.out.println();
+    }
+
+    public static void getBigExporters(String amount, FileResource fr) {
+        bigExporters(tester(fr), amount);
+    }
+
     public static void main(String[] args) {
         FileResource fr = new FileResource("resources/week3/exports_small.csv");
         getExportersOf("coffee", fr);
@@ -119,5 +133,6 @@ public class WhichCountriesExport {
         getCountryInfo("Poland", fr);
         getListExportersTwoProducts("gold", "diamonds", fr);
         getNumberOfExporters("gold", fr);
+        getBigExporters("$999,999,999", fr);
     }
 }
