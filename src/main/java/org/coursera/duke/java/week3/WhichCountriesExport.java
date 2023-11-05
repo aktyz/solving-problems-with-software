@@ -51,28 +51,12 @@ public class WhichCountriesExport {
     }
 
     public static void listExportersTwoProducts(CSVParser parser, String exportItem1, String exportItem2) {
-        ArrayList<String> exportingCountries = new ArrayList<>();
         for(CSVRecord line : parser) {
             String dataCountry = line.get("Country");
             String countryExportsLine = line.get("Exports");
-            int index = 0;
-            while(index < countryExportsLine.length()) {
-                String exportGood;
-                int commaIndex = countryExportsLine.indexOf(",", index);
-                if (commaIndex == -1) {
-                    exportGood = countryExportsLine.substring(index, countryExportsLine.length());
-                    index = countryExportsLine.length();
-                } else {
-                    exportGood = countryExportsLine.substring(index, commaIndex);
-                    index = countryExportsLine.indexOf(",", commaIndex) + 1;
-                }
-                if(exportGood.equals(exportItem1) || exportGood.equals(exportItem2)) {
-                    exportingCountries.add(dataCountry);
-                }
-            }
-        }
-        for(String country : exportingCountries) {
-            System.out.println(country);
+            if(countryExportsLine.contains(exportItem1) && countryExportsLine.contains(exportItem2))
+                System.out.println(dataCountry);
+
         }
         System.out.println();
     }
@@ -89,7 +73,7 @@ public class WhichCountriesExport {
             int beginIndex = 0;
             int endIndex = countryExportsLine.indexOf(",");
 
-            while(endIndex < countryExportsLine.length()) {
+            while(endIndex < countryExportsLine.length() && !(endIndex == -1)) {
                 countryExportItems.add(countryExportsLine.substring(beginIndex, endIndex));
                 beginIndex = endIndex + 2;
                 endIndex = countryExportsLine.indexOf(",", endIndex + 1);
@@ -101,7 +85,7 @@ public class WhichCountriesExport {
             }
 
             for(String good : countryExportItems) {
-                if(good.equals(exportItem))
+                if(good.contains(exportItem))
                     numberOfExporters ++;
             }
         }
@@ -127,12 +111,12 @@ public class WhichCountriesExport {
     }
 
     public static void main(String[] args) {
-        FileResource fr = new FileResource("resources/week3/exports_small.csv");
+        FileResource fr = new FileResource("resources/week3/exportdata.csv");
         getExportersOf("coffee", fr);
-        getCountryInfo("Peru", fr);
+        getCountryInfo("Nauru", fr);
         getCountryInfo("Poland", fr);
         getListExportersTwoProducts("gold", "diamonds", fr);
-        getNumberOfExporters("gold", fr);
-        getBigExporters("$999,999,999", fr);
+        getNumberOfExporters("sugar", fr);
+        getBigExporters("$999,999,999,999", fr);
     }
 }
