@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/week3/exports_small.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/week3/exports_small.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WhichCountriesExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WhichCountriesExport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -395,16 +396,5 @@
     <MESSAGE value="feat: Part 1: Store All Genes" />
     <MESSAGE value="feat: Part 3: Store All Genes completed" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: Part 3: Store All Genes completed" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WhichCountriesExport.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -38,10 +38,12 @@ public class WhichCountriesExport {
                 System.out.println(dataCountry + ": "
                 + line.get("Exports") + ": "
                 + line.get("Value (dollars)"));
+                System.out.println();
                 return;
             }
         }
         System.out.println("NOT FOUND");
+        System.out.println();
     }
 
     public static void getCountryInfo(String country, FileResource fr) {
@@ -72,6 +74,7 @@ public class WhichCountriesExport {
         for(String country : exportingCountries) {
             System.out.println(country);
         }
+        System.out.println();
     }
 
     public static void getListExportersTwoProducts(String exportItem1, String exportItem2, FileResource fr) {
@@ -88,23 +91,29 @@ public class WhichCountriesExport {
 
             while(endIndex < countryExportsLine.length()) {
                 countryExportItems.add(countryExportsLine.substring(beginIndex, endIndex));
-                beginIndex = endIndex + 1;
+                beginIndex = endIndex + 2;
                 endIndex = countryExportsLine.indexOf(",", endIndex + 1);
-                if(endIndex == -1) endIndex = countryExportsLine.length();
+                if(endIndex == -1)
+                {
+                    endIndex = countryExportsLine.length();
+                    countryExportItems.add(countryExportsLine.substring(beginIndex,endIndex));
+                }
             }
 
             for(String good : countryExportItems) {
-                if(good.equals(exportItem)) numberOfExporters ++;
+                if(good.equals(exportItem))
+                    numberOfExporters ++;
             }
         }
         System.out.println(numberOfExporters);
+        System.out.println();
     }
 
     public static void getNumberOfExporters(String exportItem, FileResource fr) {
         numberOfExporters(tester(fr), exportItem);
     }
     public static void main(String[] args) {
-        FileResource fr = new FileResource();
+        FileResource fr = new FileResource("resources/week3/exports_small.csv");
         getExportersOf("coffee", fr);
         getCountryInfo("Peru", fr);
         getCountryInfo("Poland", fr);
