@@ -462,7 +462,7 @@ Exercise requirements:
      Lowest Humidity was 24 at 2014-01-20 19:51:00
      ```
      **NOTE** If you look at the data for January 20, 2014, you will note that the Humidity was also 24 at 3:51pm, but you are supposed to return the first such record that was found.
-- [ ] Write the method `lowestHumidityInManyFiles` that has no parameters. This method returns a `CSVRecord` that has the lowest humidity over all the files. If there is a tie, then return the first such record that was found. You should also write a void method named `testLowestHumidityInManyFiles()` to test this method and to print the lowest humidity AND the time the lowest humidity occurred. Be sure to test this method on two files so you can check if it is working correctly. If you run this program and select the files for January 19, 2014 and January 20, 2014, you should get:
+- [x] Write the method `lowestHumidityInManyFiles` that has no parameters. This method returns a `CSVRecord` that has the lowest humidity over all the files. If there is a tie, then return the first such record that was found. You should also write a void method named `testLowestHumidityInManyFiles()` to test this method and to print the lowest humidity AND the time the lowest humidity occurred. Be sure to test this method on two files so you can check if it is working correctly. If you run this program and select the files for January 19, 2014 and January 20, 2014, you should get:
      ```txt
      Lowest Humidity was 24 at 2014-01-20 19:51:00
      ```
