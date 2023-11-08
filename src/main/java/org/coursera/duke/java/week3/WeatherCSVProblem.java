@@ -69,12 +69,36 @@ public class WeatherCSVProblem {
         }
     }
 
+    public static CSVRecord lowestHumidityInFile(CSVParser parser) {
+        CSVRecord lowestHumidityRecord = null;
+        for(CSVRecord currentLine : parser) {
+            String humidity = currentLine.get("Humidity");
+            if(!humidity.equals("N/A")) {
+                int currentHumidityValue = Integer.parseInt(humidity);
+                if(lowestHumidityRecord == null) lowestHumidityRecord = currentLine;
+                else {
+                    int lowestHumidityValue = Integer.parseInt(lowestHumidityRecord.get("Humidity"));
+                    if(currentHumidityValue < lowestHumidityValue) lowestHumidityRecord = currentLine;
+                }
+            }
+        }
+        return lowestHumidityRecord;
+    }
+
+    public static void testLowestHumidityInFile() {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        CSVRecord csv = lowestHumidityInFile(parser);
+        System.out.println("Lowest Humidity was " + csv.get("Humidity") + " at " + csv.get("DateUTC"));
+    }
+
     public static CSVParser fileToParser(File f) {
         FileResource fr = new FileResource(f);
         return fr.getCSVParser();
     }
     public static void main(String[] args) {
         //testColdestHourInFile();
-        fileWithColdestTemperature();
+        //fileWithColdestTemperature();
+        testLowestHumidityInFile();
     }
 }
