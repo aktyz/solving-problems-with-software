@@ -121,10 +121,29 @@ public class WeatherCSVProblem {
         FileResource fr = new FileResource(f);
         return fr.getCSVParser();
     }
+
+    public static double averageTemperatureInFile(CSVParser parser) {
+        int index = 0;
+        double sum = 0;
+        for(CSVRecord line : parser) {
+            double temperatureValue = Double.parseDouble(line.get("TemperatureF"));
+            sum += temperatureValue;
+            index++;
+        }
+        return index == 0 ? 0 : sum/index;
+    }
+
+    public static void testAverageTemperatureInFile() {
+        FileResource fr = new FileResource();
+        double averageTemperature = averageTemperatureInFile(fr.getCSVParser());
+        System.out.println("Average temperature in file is " + averageTemperature);
+    }
+
     public static void main(String[] args) {
         //testColdestHourInFile();
         //fileWithColdestTemperature();
         //testLowestHumidityInFile();
-        testLowestHumidityInManyFiles();
+        //testLowestHumidityInManyFiles();
+        testAverageTemperatureInFile();
     }
 }

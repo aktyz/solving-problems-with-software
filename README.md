@@ -466,7 +466,7 @@ Exercise requirements:
      ```txt
      Lowest Humidity was 24 at 2014-01-20 19:51:00
      ```
-- [ ] Write the method `averageTemperatureInFile` that has one parameter, a `CSVParser` named `parser`. This method returns a `double` that represents the average temperature in the file. You should also write a void method named `testAverageTemperatureInFile()` to test this method. When this method runs and selects the file for January 20, 2014, the method should print out:
+- [x] Write the method `averageTemperatureInFile` that has one parameter, a `CSVParser` named `parser`. This method returns a `double` that represents the average temperature in the file. You should also write a void method named `testAverageTemperatureInFile()` to test this method. When this method runs and selects the file for January 20, 2014, the method should print out:
      ```txt
      Average temperature in file is 44.93333333333334
      ```
