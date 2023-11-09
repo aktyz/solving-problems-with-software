@@ -57,7 +57,7 @@ public class WeatherCSVProblem {
     }
 
     private static void printColdestFileInfo(String fileName, CSVRecord coldestRecord) {
-        System.out.println("Question 4:");
+        System.out.println("Question 10 & 11:");
         System.out.println("Coldest day was in file " + fileName);
         System.out.println("Coldest temperature on that day was " + coldestRecord.get("TemperatureF"));
         System.out.println("All the Temperatures on the coldest day were:");
@@ -90,11 +90,17 @@ public class WeatherCSVProblem {
     }
 
     public static void testLowestHumidityInFile() {
-        FileResource fr = new FileResource("resources/week3/nc_weather/2014/weather-2014-04-01.csv");
+        FileResource fr = new FileResource("resources/week3/nc_weather/2014/weather-2014-06-29.csv");
         CSVParser parser = fr.getCSVParser();
         CSVRecord csv = lowestHumidityInFile(parser);
-        System.out.println("Question 5:");
+        System.out.println("Question 4:");
         System.out.println("Lowest Humidity was " + csv.get("Humidity") + " at " + csv.get("DateUTC"));
+        FileResource fr2 = new FileResource("resources/week3/nc_weather/2014/weather-2014-07-22.csv");
+        CSVParser parser2 = fr2.getCSVParser();
+        CSVRecord csv2 = lowestHumidityInFile(parser2);
+        System.out.println("Question 5:");
+        System.out.println("Lowest Humidity was " + csv2.get("Humidity") + " at " + csv2.get("DateUTC"));
+
     }
 
     public static CSVRecord lowestHumidityInManyFiles() {
@@ -140,7 +146,7 @@ public class WeatherCSVProblem {
     }
 
     public static void testAverageTemperatureInFile() {
-        FileResource fr = new FileResource("resources/week3/nc_weather/2014/weather-2014-06-01.csv");
+        FileResource fr = new FileResource("resources/week3/nc_weather/2013/weather-2013-08-10.csv");
         System.out.println("Question 8:");
         double averageTemperature = averageTemperatureInFile(fr.getCSVParser());
         System.out.println("Average temperature in file is " + averageTemperature);
@@ -164,7 +170,7 @@ public class WeatherCSVProblem {
     }
 
     public static void testAverageTemperatureWithHighHumidityInFile() {
-        FileResource fr = new FileResource("resources/week3/nc_weather/2014/weather-2014-03-30.csv");
+        FileResource fr = new FileResource("resources/week3/nc_weather/2013/weather-2013-09-02.csv");
         double averageTemperature = averageTemperatureWithHighHumidityInFile(fr.getCSVParser(), 80);
         System.out.println("Question 9:");
         if(!(averageTemperature == 0)) System.out.println("Average Temp when high Humidity is " + averageTemperature);
@@ -172,11 +178,17 @@ public class WeatherCSVProblem {
     }
 
     public static void main(String[] args) {
-        testColdestHourInFile();
-        fileWithColdestTemperature();
         testLowestHumidityInFile();
         testLowestHumidityInManyFiles();
         testAverageTemperatureInFile();
         testAverageTemperatureWithHighHumidityInFile();
+        fileWithColdestTemperature();
+
+//        testColdestHourInFile();
+//        fileWithColdestTemperature();
+//        testLowestHumidityInFile();
+//        testLowestHumidityInManyFiles();
+//        testAverageTemperatureInFile();
+//        testAverageTemperatureWithHighHumidityInFile();
     }
 }

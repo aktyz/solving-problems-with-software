@@ -112,11 +112,18 @@ public class WhichCountriesExport {
 
     public static void main(String[] args) {
         FileResource fr = new FileResource("resources/week3/exportdata.csv");
-        getExportersOf("coffee", fr);
-        getCountryInfo("Nauru", fr);
-        getCountryInfo("Poland", fr);
-        getListExportersTwoProducts("gold", "diamonds", fr);
-        getNumberOfExporters("sugar", fr);
+        System.out.println("Question 1:");
+        getListExportersTwoProducts("cotton", "flowers", fr);
+        System.out.println("Question 2:");
+        getNumberOfExporters("cocoa", fr);
+        System.out.println("Question 3:");
         getBigExporters("$999,999,999,999", fr);
+
+//        getExportersOf("coffee", fr);
+//        getCountryInfo("Nauru", fr);
+//        getCountryInfo("Poland", fr);
+//        getListExportersTwoProducts("cotton", "flowers", fr);
+//        getNumberOfExporters("sugar", fr);
+//        getBigExporters("$999,999,999,999", fr);
     }
 }

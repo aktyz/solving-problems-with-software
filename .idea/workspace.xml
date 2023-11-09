@@ -7,6 +7,7 @@
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WeatherCSVProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WeatherCSVProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WhichCountriesExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week3/WhichCountriesExport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +80,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.WeatherCSVProblem">
-    <configuration name="CSVMax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week3.CSVMax" />
+    <configuration name="PerimeterAssignmentRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week1.PerimeterAssignmentRunner" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.coursera.duke.java.week3.*" />
+          <option name="PATTERN" value="org.coursera.duke.java.week1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstCSVExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week3.FirstCSVExample" />
+    <configuration name="StringsFirstAssignmentsPart4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.coursera.duke.java.week2.StringsFirstAssignmentsPart4" />
       <module name="Solving_Problems_With_Software" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.coursera.duke.java.week3.*" />
+          <option name="PATTERN" value="org.coursera.duke.java.week2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,10 +148,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WeatherCSVProblem" />
-        <item itemvalue="Application.CSVMax" />
         <item itemvalue="Application.WhichCountriesExport" />
-        <item itemvalue="Application.FirstCSVExample" />
         <item itemvalue="Application.StringsThirdAssignments" />
+        <item itemvalue="Application.StringsFirstAssignmentsPart4" />
+        <item itemvalue="Application.PerimeterAssignmentRunner" />
       </list>
     </recent_temporary>
   </component>
