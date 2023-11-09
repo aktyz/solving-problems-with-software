@@ -470,7 +470,7 @@ Exercise requirements:
      ```txt
      Average temperature in file is 44.93333333333334
      ```
-- [ ] Write the method `averageTemperatureWithHighHumidityInFile` that has two parameters, a `CSVParser` named `parser` and an `integer` named `value`. This method returns a `double` that represents the average temperature of only those temperatures when the humidity was greater than or equal to value. You should also write a void method named `testAverageTemperatureWithHighHumidityInFile()` to test this method. When this method runs checking for humidity greater than or equal to 80 and selects the file for January 20, 2014, the method should print out:
+- [x] Write the method `averageTemperatureWithHighHumidityInFile` that has two parameters, a `CSVParser` named `parser` and an `integer` named `value`. This method returns a `double` that represents the average temperature of only those temperatures when the humidity was greater than or equal to value. You should also write a void method named `testAverageTemperatureWithHighHumidityInFile()` to test this method. When this method runs checking for humidity greater than or equal to 80 and selects the file for January 20, 2014, the method should print out:
      ```txt
      No temperatures with that humidity
      ```

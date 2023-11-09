@@ -139,11 +139,36 @@ public class WeatherCSVProblem {
         System.out.println("Average temperature in file is " + averageTemperature);
     }
 
+    /** This method returns a double
+     * that represents the average temperature of
+     * only those temperatures when the humidity was greater than or equal to value */
+    public static double averageTemperatureWithHighHumidityInFile(CSVParser parser, int value) {
+        double sum = 0;
+        int index = 0;
+        for(CSVRecord currentLine : parser) {
+            double lineTemperature = Double.parseDouble(currentLine.get("TemperatureF"));
+            int lineHumidity = Integer.parseInt(currentLine.get("Humidity"));
+            if(lineHumidity > value) {
+                sum += lineTemperature;
+                index++;
+            }
+        }
+        return index == 0 ? 0 : sum/index;
+    }
+
+    public static void testAverageTemperatureWithHighHumidityInFile() {
+        FileResource fr = new FileResource();
+        double averageTemperature = averageTemperatureWithHighHumidityInFile(fr.getCSVParser(), 80);
+        if(!(averageTemperature == 0)) System.out.println("Average Temp when high Humidity is " + averageTemperature);
+        else System.out.println("No temperatures with that humidity");
+    }
+
     public static void main(String[] args) {
         //testColdestHourInFile();
         //fileWithColdestTemperature();
         //testLowestHumidityInFile();
         //testLowestHumidityInManyFiles();
-        testAverageTemperatureInFile();
+        //testAverageTemperatureInFile();
+        testAverageTemperatureWithHighHumidityInFile();
     }
 }
