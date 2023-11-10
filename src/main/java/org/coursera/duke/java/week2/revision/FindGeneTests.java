@@ -1,13 +1,12 @@
 package org.coursera.duke.java.week2.revision;
 
-import static org.coursera.duke.java.week2.revision.FindGene.findGene;
+import static org.coursera.duke.java.week2.revision.FindGene.*;
 import static org.coursera.duke.java.week2.revision.Utils.printGene;
 
 public class FindGeneTests {
     public static void testFindGene() {
         String dna = "AATGCGTAATATGGT";
-        //String gene = findGeneSimple(dna, "ATG", "TAA");
-        String gene = findGene(dna);
+        String gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("")) {
             System.out.print("Test with no valid codons inside genome passed - Gene is empty: ");
             printGene(gene);
@@ -16,7 +15,7 @@ public class FindGeneTests {
         }
 
         dna = "AAATGCCCTAACTAGATTAAGAAACC";
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("ATGCCCTAA")) {
             System.out.print("Test with valid gene passed - Gene is: ");
             printGene(gene);
@@ -25,8 +24,7 @@ public class FindGeneTests {
         }
 
         dna = "AATGCTAGGGTAATATGGT";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("ATGCTAGGGTAA")) {
             System.out.print("Test with valid gene passed - Gene is: ");
             printGene(gene);
@@ -35,8 +33,7 @@ public class FindGeneTests {
         }
 
         dna = "ATCCTATGCTTCGGCTGCTCTAATATGGT";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("ATGCTTCGGCTGCTCTAA")) {
             System.out.print("Test with valid gene passed - Gene is: ");
             printGene(gene);
@@ -45,8 +42,7 @@ public class FindGeneTests {
         }
 
         dna = "ATGGGTTAAGTC";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("ATGGGTTAA")) {
             System.out.print("Test with valid gene passed - Gene is: ");
             printGene(gene);
@@ -55,8 +51,7 @@ public class FindGeneTests {
         }
 
         dna = "ATGTAA";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("ATGTAA")) {
             System.out.print("Test with shortest gene passed - Gene is: ");
             printGene(gene);
@@ -65,8 +60,7 @@ public class FindGeneTests {
         }
 
         dna = "TAATAA";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("")) {
             System.out.print("Test with no start codon passed - Gene is empty: ");
             printGene(gene);
@@ -75,8 +69,7 @@ public class FindGeneTests {
         }
 
         dna = "TAAATGAAATGAATTG";
-        //gene = findGeneSimple(dna, "ATG", "TAA");
-        gene = findGene(dna);
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
         if(gene.equals("")) {
             System.out.print("Test with no end codon passed - Gene is empty: ");
             printGene(gene);
