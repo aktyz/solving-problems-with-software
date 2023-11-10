@@ -17,4 +17,30 @@ public class Utils {
             }
         }
     }
+
+    public static boolean twoOccurrences(String stringA, String stringB) {
+        if(stringA.equals("")) return false;
+        if(stringB.contains(stringA)) {
+            int firstIndex = stringB.indexOf(stringA);
+            if(!(firstIndex == -1)) {
+                int secondIndex = stringB.indexOf(stringA, firstIndex + stringA.length());
+                if(secondIndex == -1) return false;
+                else return true;
+            }
+        }
+        return false;
+    }
+
+    //This method finds the first occurrence of stringa in stringb,
+    //and returns the part of stringb that follows stringa.
+    //If stringa does not occur in stringb, then return stringb.
+    //
+    public static String lastPart(String stringA, String stringB) {
+        if(stringA.equals("")) return stringB;
+        if(stringB.contains(stringA)) {
+            return stringB.substring(stringB.indexOf(stringA) + stringA.length());
+        }
+        return stringB;
+    }
+
 }
