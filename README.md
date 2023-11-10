@@ -500,3 +500,5 @@ boolean endsWith = s.endsWith("king"); // endsWith will be assigned **false**
 
 Consult [documentation!](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html)
 
+### Finding All Genes in DNA
+

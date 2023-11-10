@@ -77,6 +77,46 @@ public class FindGeneTests {
             System.out.println("Failed: Test with no end codon");
         }
 
+        dna = "ATGATCGCTAATGCTTAAGCTATG";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGATCGCTAATGCTTAA")) {
+            System.out.print("Passed: Found gene despite TAA stopCodon repetition, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when stopCodon repeats");
 
+        dna = "ATGGGACTAAATGCCGTAA";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGCCGTAA")) {
+            System.out.print("Passed: Found gene despite ATG startCodon repetition, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when startCodon repeats, dna: " + dna);
+
+        dna = "ATGATGGCTAATGCTAAGTAAGCTATG";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGATGGCTAATGCTAAGTAA")) {
+            System.out.print("Passed: Found gene despite TAA stopCodon repetition and ATG gene repetition, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when stopCodon and startCodon repeat, dna: " + dna);
+
+        dna = "ATGCATGGCTAATGCTAAGTAAGCTATG";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGCATGGCTAA")) {
+            System.out.print("Passed: Found gene despite TAA stopCodon repetition and ATG gene repetition, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when stopCodon and startCodon repeat, dna: " + dna);
+
+        dna = "ATGCGATGGCTAATGCTAAGTAAGCTATG";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGGCTAATGCTAAGTAA")) {
+            System.out.print("Passed: Found gene despite TAA stopCodon repetition and ATG gene repetition, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when stopCodon and startCodon repeat, dna: " + dna);
+        
+        dna = "ATGATCGCTGATTAGGCTTAAATTGACG";
+        gene = findGene(dna, START_CODON, TAA_STOP_CODON);
+        if(gene.equals("ATGATCGCTGATTAG")) {
+            System.out.print("Passed: Found gene despite when three different stopCodons available, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find the correct gene when when three different stopCodons available, dna: " + dna);
     }
 }
