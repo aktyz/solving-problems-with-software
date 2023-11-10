@@ -479,3 +479,24 @@ Exercise requirements:
      Average Temp when high Humidity is 41.78666666666667
      ```
 
+## Summary of the first three weeks
+Given that I took a break of two months past the second week, I failed the evaluation of the second week. I need to revise Strings.
+
+### Finding a Gene in DNA
+
+Useful Built-In Methods in JAVA String class:
+```java
+String s = "dukeProgramming";
+/** the below method will give you a s substring of "pro" (7 - 4 = 3) */
+String sub = s.substring(4,7);
+int lenght = s.lenght(); // quite obvious
+int programIndex = s.indexOf("Program"); // will return the startIndex of "Program", that is **4**
+int gIndex = s.indexOf("g"); // gIndex will be assigned **7**
+int fIndex = s.indexOf("f"); // fIndex will be assigned **-1** as there is no "f" in our string
+int secondGIndex = s.indexOf("g", 8); // secondGIndex will be assigned **14**
+boolean startsWith = s.startsWith("duke"); // startsWith will be assigned **true**
+boolean endsWith = s.endsWith("king"); // endsWith will be assigned **false**
+```
+
+Consult [documentation!](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html)
+
