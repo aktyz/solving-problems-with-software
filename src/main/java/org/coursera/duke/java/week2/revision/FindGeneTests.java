@@ -119,5 +119,19 @@ public class FindGeneTests {
             System.out.print("Passed: Found gene despite when three different stopCodons available, gene: ");
             printGene(gene);
         } else System.out.println("Failed: Function did not find the correct gene when when three different stopCodons available, dna: " + dna);
+
+        dna = "CCAGTAATGCCGTAGCCCGACTTA";
+        gene = findGene(dna, START_CODON);
+        if(gene.equals("ATGCCGTAG")) {
+            System.out.print("Passed: Correctly identified gene ending with TAG stopCodon, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find gene ending with TAG stopCodon");
+
+        dna = "CCGTAAATGCCGCTAAGTTGATAAGCT";
+        gene = findGene(dna, START_CODON);
+        if(gene.equals("ATGCCGCTAAGTTGA")) {
+            System.out.print("Passed: Correctly identified gene ending with TGA stopCodon, gene: ");
+            printGene(gene);
+        } else System.out.println("Failed: Function did not find gene ending with TGA stopCodon");
     }
 }
