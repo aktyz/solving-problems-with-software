@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/UtilsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/UtilsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/FindGene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/FindGene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/FindGeneTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/FindGeneTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +402,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week2/revision/FindGeneTests.java</url>
-          <line>152</line>
+          <line>161</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

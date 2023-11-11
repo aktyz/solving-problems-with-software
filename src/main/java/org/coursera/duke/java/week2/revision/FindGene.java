@@ -60,4 +60,17 @@ public class FindGene {
         int result = dna.indexOf(stopCodon, startIndex);
         return (result == -1) ? dna.length() : result;
     }
+
+    public static int countGenes(String dna) {
+        int startIndex = 0;
+        int geneCount = 0;
+        String gene = "";
+        while(true) {
+            gene = findGene(dna, START_CODON, startIndex);
+            if(gene.isEmpty()) break;
+            geneCount++;
+            startIndex = dna.indexOf(gene, startIndex) + gene.length();
+        }
+        return geneCount;
+    }
 }

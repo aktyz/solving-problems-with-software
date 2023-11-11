@@ -137,19 +137,32 @@ public class FindGeneTests {
         dna = "CGATGATCGCATGATTCATGCTTAAATAAAGCTCA"; // two genes string
         System.out.println("Two genes should be printed out:");
         printAllGenes(dna);
+        int geneCount = countGenes(dna);
+        if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
+        else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
 
         //            ATG   TAA  ATG   v  v  TGA
         dna = "ATGctgTAAtaATGCTGCAACGGTGAAGA";
         System.out.println("Two genes should be printed out:");
         printAllGenes(dna);
+        geneCount = countGenes(dna);
+        if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
+        else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
 
         //     ATG   v  v  v  TAA   v  v  ATGTAA
         dna = "ATGATCATAAGAAGATAATAGAGGGCCATGTAA";
         System.out.println("Two genes should be printed out:");
         printAllGenes(dna);
+        geneCount = countGenes(dna);
+        if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
+        else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
 
         dna = "TAATAGTGAGCA";
         System.out.println("No genes should be printed out:");
         printAllGenes(dna);
+        geneCount = countGenes(dna);
+        if(geneCount == 0) System.out.println("Passed: correctly counted no genes");
+        else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly in no genes string, geneCount: " + geneCount);
+
     }
 }
