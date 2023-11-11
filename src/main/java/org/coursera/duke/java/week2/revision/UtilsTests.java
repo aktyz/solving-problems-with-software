@@ -1,7 +1,6 @@
 package org.coursera.duke.java.week2.revision;
 
-import static org.coursera.duke.java.week2.revision.Utils.lastPart;
-import static org.coursera.duke.java.week2.revision.Utils.twoOccurrences;
+import static org.coursera.duke.java.week2.revision.Utils.*;
 
 public class UtilsTests {
     public static void testUtils() {
@@ -51,5 +50,23 @@ public class UtilsTests {
         remainder = lastPart("www.lksdjf.lala", "ksjdfhwww.lksdjf.lalalfskdjfwww.lksdjf.lala");
         if(remainder.equals("lfskdjfwww.lksdjf.lala")) System.out.println("Passed: Remainder of string correctly returned: " + remainder);
         else System.out.println("Failed: Utils.lastPart() failed to identify the first out of two occurences of stringA, remainder: " + remainder);
+
+        System.out.println();
+
+        int howMany = howMany("GAA", "ATGAACGAATTGAATC");
+        if(howMany == 3) System.out.println("Passed: Function correctly counted string occurrences");
+        else System.out.println("Failed: Utils.howMany() failed to count correctly GAA string occurrences");
+
+        howMany = howMany("AA", "ATAAAA");
+        if(howMany == 2) System.out.println("Passed: Function correctly counted string occurrences");
+        else System.out.println("Failed: Utils.howMany() failed to count correctly AA string occurrences");
+
+        howMany = howMany("", "TAATAA");
+        if(howMany == 0) System.out.println("Passed: No occurrences of empty string in a string");
+        else System.out.println("Failed: Utils.howMany() found empty string in a string");
+
+        howMany = howMany("A", "");
+        if(howMany == 0) System.out.println("Passed: There will be no occurrences of any string in an empty string");
+        else System.out.println("Failed: Utils.howMany() found some string occurrences in an empty string");
     }
 }

@@ -31,10 +31,6 @@ public class Utils {
         return false;
     }
 
-    //This method finds the first occurrence of stringa in stringb,
-    //and returns the part of stringb that follows stringa.
-    //If stringa does not occur in stringb, then return stringb.
-    //
     public static String lastPart(String stringA, String stringB) {
         if(stringA.equals("")) return stringB;
         if(stringB.contains(stringA)) {
@@ -43,4 +39,14 @@ public class Utils {
         return stringB;
     }
 
+    //how many times stringA appears in stringB
+    public static int howMany(String stringA, String stringB) {
+        if(stringA.isEmpty() || stringB.isEmpty()) return 0;
+        int occurrences = 0;
+        while(stringB.contains(stringA)) {
+            stringB = stringB.substring(stringB.indexOf(stringA) + stringA.length());
+            occurrences++;
+        }
+        return occurrences;
+    }
 }
