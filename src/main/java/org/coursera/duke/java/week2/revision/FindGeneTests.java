@@ -1,5 +1,7 @@
 package org.coursera.duke.java.week2.revision;
 
+import edu.duke.StorageResource;
+
 import static org.coursera.duke.java.week2.revision.FindGene.*;
 import static org.coursera.duke.java.week2.revision.Utils.printGene;
 
@@ -140,7 +142,7 @@ public class FindGeneTests {
         int geneCount = countGenes(dna);
         if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
         else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
-
+        System.out.println();
         //            ATG   TAA  ATG   v  v  TGA
         dna = "ATGctgTAAtaATGCTGCAACGGTGAAGA";
         System.out.println("Two genes should be printed out:");
@@ -148,7 +150,7 @@ public class FindGeneTests {
         geneCount = countGenes(dna);
         if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
         else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
-
+        System.out.println();
         //     ATG   v  v  v  TAA   v  v  ATGTAA
         dna = "ATGATCATAAGAAGATAATAGAGGGCCATGTAA";
         System.out.println("Two genes should be printed out:");
@@ -156,13 +158,21 @@ public class FindGeneTests {
         geneCount = countGenes(dna);
         if(geneCount == 2) System.out.println("Passed: correctly counted two genes");
         else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly, geneCount: " + geneCount);
-
+        System.out.println();
         dna = "TAATAGTGAGCA";
         System.out.println("No genes should be printed out:");
         printAllGenes(dna);
         geneCount = countGenes(dna);
         if(geneCount == 0) System.out.println("Passed: correctly counted no genes");
         else System.out.println("Failed: FindGene.countGenes() couldn't count genes correctly in no genes string, geneCount: " + geneCount);
+        System.out.println();
 
+        System.out.println("StorageResource testing");
+        dna = "ATGATCATAAGAAGATAATAGAGGGCCATGTAA";
+        StorageResource sr = storeGenes(dna);
+        for(String s : sr.data()) {
+            printGene(s);
+        }
+        System.out.println();
     }
 }

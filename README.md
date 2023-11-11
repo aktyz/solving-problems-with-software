@@ -482,7 +482,7 @@ Exercise requirements:
 ## Summary of the first three weeks
 Given that I took a break of two months past the second week, I failed the evaluation of the second week. I need to revise Strings.
 
-### Finding a Gene in DNA
+### Summary of Strings Revision
 
 Useful Built-In Methods in JAVA String class:
 ```java
@@ -500,5 +500,5 @@ boolean endsWith = s.endsWith("king"); // endsWith will be assigned **false**
 
 Consult [documentation!](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html)
 
-### Finding All Genes in DNA
+`StorageResource` from duke package is for now replacing `ArrayList` from Java Library.
 

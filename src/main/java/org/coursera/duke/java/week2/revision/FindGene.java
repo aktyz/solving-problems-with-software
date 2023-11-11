@@ -1,5 +1,7 @@
 package org.coursera.duke.java.week2.revision;
 
+import edu.duke.StorageResource;
+
 import static org.coursera.duke.java.week2.revision.Utils.printGene;
 
 public class FindGene {
@@ -7,6 +9,8 @@ public class FindGene {
     public static final String TAA_STOP_CODON = "TAA";
     public static final String TGA_STOP_CODON = "TGA";
     public static final String TAG_STOP_CODON = "TAG";
+
+    public static final String CTG_CODON = "CTG";
 
     public static void printAllGenes(String dna) {
         int startIndex = 0;
@@ -72,5 +76,18 @@ public class FindGene {
             startIndex = dna.indexOf(gene, startIndex) + gene.length();
         }
         return geneCount;
+    }
+
+    public static StorageResource storeGenes(String dna) {
+        int startIndex = 0;
+        StorageResource sr = new StorageResource();
+        String currentDna = dna.toUpperCase();
+        while(true) {
+            String currentGene = findGene(currentDna, START_CODON, startIndex);
+            if(currentGene.isEmpty()) break;
+            sr.add(currentGene);
+            startIndex = currentDna.indexOf(currentGene, startIndex) + currentGene.length();
+        }
+        return sr;
     }
 }

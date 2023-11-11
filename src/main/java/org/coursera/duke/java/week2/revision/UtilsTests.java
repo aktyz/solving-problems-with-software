@@ -68,5 +68,18 @@ public class UtilsTests {
         howMany = howMany("A", "");
         if(howMany == 0) System.out.println("Passed: There will be no occurrences of any string in an empty string");
         else System.out.println("Failed: Utils.howMany() found some string occurrences in an empty string");
+
+        System.out.println();
+
+        double cgRatio = cgRatio("ATGCCATAG");
+        if(cgRatio == (float)4/ (float)9) System.out.println("Passed: cgRatio correctly calculated for the first string, cgRatio: " + cgRatio);
+        else System.out.println("Failed: Utils.cgRatio() miscalculated cgRatio: " + cgRatio + ", instead of " + (float)4/ (float)9);
+
+        System.out.println();
+
+        int ctgCount = countCTG("CTGCTGCTGTAA");
+        if(ctgCount == 3) System.out.println("Passed: function correctly counted number of CTG occurrences");
+        else System.out.println("Failed: Utils.countCTG() failed to count 3 CTG occurrences");
+
     }
 }

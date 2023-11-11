@@ -1,5 +1,7 @@
 package org.coursera.duke.java.week2.revision;
 
+import static org.coursera.duke.java.week2.revision.FindGene.CTG_CODON;
+
 public class Utils {
     public static void printGene(String gene) {
         if(!gene.equals("")) {
@@ -8,6 +10,37 @@ public class Utils {
             System.out.print(gene.substring(gene.length() - 3));
         }
         System.out.println();
+    }
+
+    public static float cgRatio(String dna) {
+        if(dna.length() == 0) return 0;
+        else {
+            int cgCount = 0;
+            String currentDna = dna.toUpperCase();
+            while (currentDna.contains("C")) {
+                currentDna = currentDna.substring(currentDna.indexOf("C") + 1);
+                cgCount++;
+            }
+            currentDna = dna.toUpperCase();
+            while (currentDna.contains("G")) {
+                currentDna = currentDna.substring(currentDna.indexOf("G") + 1);
+                cgCount++;
+            }
+            return (float) cgCount/dna.length();
+        }
+    }
+
+    public static int countCTG(String dna) {
+        if(dna.length() == 0) return 0;
+        else {
+            int ctgCount = 0;
+            String currentDna = dna.toUpperCase();
+            while(currentDna.contains(CTG_CODON)) {
+                currentDna = currentDna.substring(currentDna.indexOf(CTG_CODON) + CTG_CODON.length());
+                ctgCount++;
+            }
+            return ctgCount;
+        }
     }
 
     private static void divideToTriplets(String dna) {
@@ -39,7 +72,6 @@ public class Utils {
         return stringB;
     }
 
-    //how many times stringA appears in stringB
     public static int howMany(String stringA, String stringB) {
         if(stringA.isEmpty() || stringB.isEmpty()) return 0;
         int occurrences = 0;
