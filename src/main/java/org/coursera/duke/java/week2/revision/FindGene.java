@@ -1,14 +1,27 @@
 package org.coursera.duke.java.week2.revision;
 
+import static org.coursera.duke.java.week2.revision.Utils.printGene;
+
 public class FindGene {
     public static final String START_CODON = "ATG";
     public static final String TAA_STOP_CODON = "TAA";
     public static final String TGA_STOP_CODON = "TGA";
     public static final String TAG_STOP_CODON = "TAG";
 
-    public static String findGene(String dna, String startCodon) {
+    public static void printAllGenes(String dna) {
+        int startIndex = 0;
+        String gene = "";
+        while(true) {
+            gene = findGene(dna, START_CODON, startIndex);
+            if(gene.isEmpty()) break;
+            printGene(gene);
+            startIndex = dna.indexOf(gene, startIndex) + gene.length();
+        }
+    }
+
+    public static String findGene(String dna, String startCodon, int whereToStart) {
         String result = null;
-        int atgIndex = dna.indexOf(startCodon);
+        int atgIndex = dna.indexOf(startCodon, whereToStart);
         int currentDnaIndex = findFirstOccurringStopCodon(dna, atgIndex);
 
         while (atgIndex <= dna.length()) {
