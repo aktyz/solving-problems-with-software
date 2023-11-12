@@ -5,10 +5,13 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 public class FileData {
+
+    public static final String FEMALE = "f";
+    public static final String MALE = "m";
     public static final String TEST_DATA_LOCALISATION = "resources/week4/us_babynames_test/";
     public CSVParser readOneFile(int year) {
-        String fileName = "data/yob" + year + ".txt";
-        FileResource fr = new FileResource(fileName);
+        String fileName = "yob" + year + "short.txt";
+        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + fileName);
         CSVParser parser = fr.getCSVParser(false);
         for(CSVRecord line : parser) { // is this naming stored in parser?
             String name = line.get(0).toLowerCase();
@@ -31,7 +34,7 @@ public class FileData {
     public static void printRareNames(int rareValue) {
         FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "example-small.csv");
         System.out.println();
-        System.out.println("Printing names occurring les or equal to: " + rareValue + " times");
+        System.out.println("Printing names occurring less or equal to: " + rareValue + " times");
         for(CSVRecord line : fr.getCSVParser(false)) {
             int numBorn = Integer.parseInt(line.get(2));
             if(numBorn <= 100) {
@@ -43,21 +46,83 @@ public class FileData {
         }
     }
 
-    public static void totalBirths(FileResource fr) {
+    public static int totalBirths(FileResource fr) {
         int total = 0;
-        int fBorn = 0;
-        int mBorn = 0;
         for(CSVRecord line : fr.getCSVParser(false)) {
             int numBorn = Integer.parseInt(line.get(2));
             total += numBorn;
-
-            if(line.get(1).equals("F")) fBorn += numBorn;
-            if(line.get(1).equals("M")) mBorn += numBorn;
-
         }
-        System.out.println();
         System.out.println("Total number of kids born: " + total);
-        System.out.println("Girls born: " + fBorn);
-        System.out.println("Boys born: " + mBorn);
+        return total;
+    }
+
+    public static int getNumberOfFemaleNames(FileResource fr) {
+        int fNames = 0;
+        for(CSVRecord line : fr.getCSVParser(false)) {
+            String lineGender = line.get(1).toLowerCase();
+            if(lineGender.equals(FEMALE))
+                fNames ++;
+        }
+        System.out.println("Total number of female names in the file: " + fNames);
+        return fNames;
+    }
+
+    public static int getNumberOfMaleNames(FileResource fr) {
+        int mNames = 0;
+        for(CSVRecord line : fr.getCSVParser(false)) {
+            String lineGender = line.get(1).toLowerCase();
+            if(lineGender.equals(MALE))
+                mNames ++;
+        }
+        System.out.println("Total number of male names in the file: " + mNames);
+        return mNames;
+    }
+
+    public static int totalGirlsBorn(FileResource fr) {
+        int total = 0;
+        for(CSVRecord line : fr.getCSVParser(false)) {
+            int numBorn = Integer.parseInt(line.get(2));
+            String gender = line.get(1).toLowerCase();
+            if(gender.equals(FEMALE)) total += numBorn;
+        }
+        System.out.println("Total number of girls born: " + total);
+        return total;
+    }
+
+    public static int totalBoysBorn(FileResource fr) {
+        int total = 0;
+        for(CSVRecord line : fr.getCSVParser(false)) {
+            int numBorn = Integer.parseInt(line.get(2));
+            String gender = line.get(1).toLowerCase();
+            if(gender.equals(MALE)) total += numBorn;
+        }
+        System.out.println("Total number of boys born: " + total);
+        return total;
+    }
+
+    public static int getRank(int year, String name, String gender) {
+        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        String workingName = name.toLowerCase();
+        String workingGender = gender.toLowerCase();
+        int numberOfNames = 0;
+        switch (workingGender) {
+            case FEMALE:
+                numberOfNames = getNumberOfFemaleNames(fr);
+                break;
+            case MALE:
+                numberOfNames = getNumberOfMaleNames(fr);
+                break;
+            default:
+                return -1;
+        }
+        int rank = 0;
+        for (CSVRecord line : fr.getCSVParser(false)) {
+            String recordName = line.get(0).toLowerCase();
+            String recordGender = line.get(1).toLowerCase();
+            if (recordGender.equals(workingGender) && rank < numberOfNames) rank++;
+            if(recordName.equals(workingName)) break;
+        }
+        if(rank == numberOfNames) return -1;
+        return rank == 0 ? -1 : rank;
     }
 }
