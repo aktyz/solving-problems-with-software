@@ -1,7 +1,6 @@
 package org.coursera.duke.java.week4;
 
-import static org.coursera.duke.java.week4.FileData.getName;
-import static org.coursera.duke.java.week4.FileData.getRank;
+import static org.coursera.duke.java.week4.FileData.*;
 
 public class FileDataTest {
     public static void testGetRank() {
@@ -34,5 +33,9 @@ public class FileDataTest {
         fileName = getName(2012, 37, "M");
         if(fileName.equals("NO NAME")) System.out.println("Passed: correctly got out of scope rank");
         else System.out.println("Failed: FileData.getName() found non existing rank name: " + fileName);
+    }
+
+    public static void testWhatIsNameInYear() {
+        whatIsNameInYear("Isabella",2012, 2014, "F");
     }
 }

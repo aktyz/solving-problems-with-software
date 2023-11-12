@@ -152,4 +152,14 @@ public class FileData {
         }
         return "NO NAME";
     }
+
+    public static void whatIsNameInYear(String name, int year, int newYear, String gender) {
+        String workingName = name.toLowerCase();
+
+        int nameRankInYearBorn = getRank(year, workingName, gender);
+        String newYearName = getName(newYear, nameRankInYearBorn, gender);
+        String sheHe = gender.toLowerCase().equals(FEMALE) ? "she" : "he";
+
+        System.out.println(name + " born in " + year + " would be " + newYearName + " if " + sheHe + " was born in " + newYear);
+    }
 }
