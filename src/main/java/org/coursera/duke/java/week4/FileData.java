@@ -125,4 +125,31 @@ public class FileData {
         if(rank == numberOfNames) return -1;
         return rank == 0 ? -1 : rank;
     }
+
+    public static String getName(int year, int rank, String gender) {
+        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        String workingGender = gender.toLowerCase();
+        int numberOfNames = 0;
+        switch (workingGender) {
+            case FEMALE:
+                numberOfNames = getNumberOfFemaleNames(fr);
+                break;
+            case MALE:
+                numberOfNames = getNumberOfMaleNames(fr);
+                break;
+            default:
+                return "NO NAME";
+        }
+        if(rank <= numberOfNames) {
+            int fileRank = 0;
+            for (CSVRecord line : fr.getCSVParser(false)) {
+                String recordGender = line.get(1).toLowerCase();
+                if (recordGender.equals(workingGender) && fileRank < numberOfNames) fileRank++;
+                if (fileRank == rank) {
+                    return line.get(0);
+                }
+            }
+        }
+        return "NO NAME";
+    }
 }
