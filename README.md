@@ -500,11 +500,58 @@ boolean endsWith = s.endsWith("king"); // endsWith will be assigned **false**
 
 Consult [documentation!](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html)
 
+Newly written code in [src/main/java/org/coursera/duke/java/week2/revision](src/main/java/org/coursera/duke/java/week2/revision)
+
 `StorageResource` from duke package is for now replacing `ArrayList` from Java Library.
 
-## Week 4
-Baby Names MiniProject
+## Week 4 - Baby Names MiniProject
 
+For this assignment, we are providing data on baby names from the United States and you will answer questions about this data. The data files give information on the first names of people born in a particular year. We have data from 1880 through 2014 on both boys and girls names.
 
+Let's have a look at the beggining of `yob2014.csv` file:
+```txt
+Emma,F,20799
+Olivia,F,19674
+Sophia,F,18490
+Isabella,F,16950
+Ava,F,15586
+Mia,F,13442
+Emily,F,12562
+Abigail,F,11985
+Madison,F,10247
+Charlotte,F,10048
+Harper,F,9564
+Sofia,F,9542
+```
+the extract shows that `Emma` is the most popular name, the `F` is for female and the `20799` indicates the number of Emma’s born in 2014. The file lists all the girls first, and they are listed in order based on the number of births, from largest numbers to smallest numbers.
 
+Another snapshot of the file shows the end of the girl's names list and the start of the boy's names list
+```txt
+Zykeriah,F,5
+Zylynn,F,5
+Zyrihanna,F,5
+Zyriyah,F,5
+Noah,M,19144
+Liam,M,18342
+Mason,M,17092
+Jacob,M,16712
+William,M,16687
+Ethan,M,15619
+Michael,M,15323
+```
+You can see that `Noah` was the most popular boys name in 2014, the `M` indicates a male, and `19144` is the number of boys named Noah that year. Also notice there are no headers in this file. The video showed you how to access the fields in a .csv file when there are no headers. The code is already in the project under `feat: Understanding Week 4 Project Data` commit.
+
+Since these data files are quite large, we will also provide three small files with fake data for testing. You can find `yob2012short.csv`, `yob2013short.csv` and `yob2014short.csv` in [/resources/week4/us_babynames_test](resources/week4/us_babynames_test). The three files have only ten lines each, 5 girls and 5 boys names, and smaller numbers to work with.
+
+You will write a program with several methods and tester methods to test each method you write. You should start with understanding the methods shown in the video. Specifically you should write the following methods:
+- [x] Modify the method `totalBirths` (shown in the video for this project) to also print the number of girls names , the number of boys names and the total names in the file.
+- [ ] Write the method named `getRank` that has three parameters: an `integer` named `year`, a `string` named `name`, and a `string` named `gender` (`F` for female and `M` for male). This method returns the rank of the name in the file for the given gender, where rank 1 is the name with the largest number of births. If the name is not in the file, then `-1` is returned. For example, in the file `yob2012short.csv`, given the name `Mason`, the year `2012` and the gender `M`, the number returned is `2`, as `Mason` is the boys name with the second highest number of births. Given the name `Mason`, the year `2012` and the gender `F`, the number returned is `-1` as `Mason` does not appear with an `F` in that file.
+- [ ] Write the method named `getName` that has three parameters: an `integer` named `year`, an `integer` named `rank`, and a `string` named `gender` (`F` for female and `M` for male). This method returns the name of the person in the file at this rank, for the given gender, where rank 1 is the name with the largest number of births. If the rank does not exist in the file, then `NO NAME`  is returned.
+- [ ] What would your name be if you were born in a different year? Write the void method named `whatIsNameInYear` that has four parameters: a `String name`, an `integer` named `year` representing the year that name was born, an `integer` named `newYear` and a `string` named `gender` (`F` for female and `M` for male). This method determines what name would have been named if they were born in a different year, based on the same popularity. That is, you should determine the rank of name in the year they were born, and then print the name born in `newYear` that is at the same rank and same gender. For example, using the files `yob2012short.csv` and `yob2014short.csv`, notice that **in 2012 `Isabella` is the third most popular girl's name**. If `Isabella` was born in 2014 instead, she would have been named `Sophia`, **the third most popular girl's name that year**. The output might look like this:
+      ```txt
+      Isabella born in 2012 would be Sophia if she was born in 2014.
+      ```
+- [ ] Write the method `yearOfHighestRank` that has two parameters: a `String name`, and a `string` named `gender` (`F` for female and `M` for male). This method selects a range of files to process and returns an `integer`, the year with the highest rank for the name and gender. If the name and gender are not in any of the selected files, it should return `-1`. For example, calling `yearOfHighestRank` with name `Mason` and gender `M` and selecting the three test files above results in returning the year `2012`. That is because `Mason` was ranked the 2nd most popular name in 2012, ranked 4th in 2013 and ranked 3rd in 2014. His highest ranking was in 2012.
+- [ ] Write the method `getAverageRank` that has two parameters: a `String name`, and a `string` named `gender` (`F` for female and `M` for male). This method selects a range of files to process and returns a `double` representing the average rank of the name and gender over the selected files. It should return `-1.0` if the name is not ranked in any of the selected files. For example calling `getAverageRank` with name `Mason` and gender `M` and selecting the three test files above results in returning `3.0`, as he is rank 2 in the year 2012, rank 4 in 2013 and rank 3 in 2014.  As another example, calling `getAverageRank` with name `Jacob` and gender `M` and selecting the three test files above results in returning `2.66`.
+- [ ] Write the method `getTotalBirthsRankedHigher` that has three parameters: an `integer` named `year`, a `string` named `name`, and a `string` named `gender` (`F` for female and `M` for male). This method returns an `integer`, the total number of births of those names with the same gender and same year who are ranked higher than name. For example, if `getTotalBirthsRankedHigher` accesses the `yob2012short.csv` file with name set to `Ethan`, gender set to `M`, and year set to `2012`, then this method should return `15`, since `Jacob` has 8 births and `Mason` has 7 births, and those are the only two ranked higher than Ethan.
 
