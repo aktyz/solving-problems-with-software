@@ -65,4 +65,15 @@ public class FileDataTest {
         if(result == (double) 5/3) System.out.println("Passed: Sophia's average rank calculated correctly: " + result);
         else System.out.println("Failed: FileData.getAverageRank() failed to calculate Sophia's average rank correctly: " + result);
     }
+
+    public static void testGetTotalBirthsRankedHigher() {
+        int result = getTotalBirthsRankedHigher(2012, "Ethan", "M");
+        if(result == 15) System.out.println("Passed: Total boys with more popular names than Ethan born in 2012 is " + result);
+        else System.out.println("Failed: FileData.getTotalBirthsRankedHigher() failed to calculate number of births more popular than Ethan, result: " + result);
+
+        result = getTotalBirthsRankedHigher(2014, "Zyta", "F");
+        if(result == 18) System.out.println("Passed: Total girls with more popular names than Zyta born in 2014 is " + result);
+        else System.out.println("Failed: FileData.getTotalBirthsRankedHigher() failed to calculate number of births more popular than Zyta, result: " + result);
+
+    }
 }

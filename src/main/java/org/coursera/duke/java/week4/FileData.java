@@ -197,4 +197,18 @@ public class FileData {
         if(numberOfFiles != 0) return (double) totalOfRanks / numberOfFiles;
         else return -1.0;
     }
+
+    public static int getTotalBirthsRankedHigher(int year, String name, String gender) {
+        int totalBirthsRankedHigher = 0;
+        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        String workingName = name.toLowerCase();
+        String workingGender = gender.toLowerCase();
+        for (CSVRecord line : fr.getCSVParser(false)) {
+            if(workingGender.equals(line.get(1).toLowerCase())) {
+                if(workingName.equals(line.get(0).toLowerCase())) break;
+                totalBirthsRankedHigher += Integer.parseInt(line.get(2));
+            }
+        }
+        return totalBirthsRankedHigher;
+    }
 }

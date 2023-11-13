@@ -1,9 +1,9 @@
 package org.coursera.duke.java.week4;
 
-import static org.coursera.duke.java.week4.FileDataTest.testGetAverageRank;
+import static org.coursera.duke.java.week4.FileDataTest.testGetTotalBirthsRankedHigher;
 
 public class Main {
     public static void main(String[] args) {
-        testGetAverageRank();
+        testGetTotalBirthsRankedHigher();
     }
 }
