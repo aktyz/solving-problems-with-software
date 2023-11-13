@@ -179,4 +179,22 @@ public class FileData {
         }
         return yearOfHighestRank;
     }
+
+    public static double getAverageRank(String name, String gender) {
+        DirectoryResource dr = new DirectoryResource();
+        String workingName = name.toLowerCase();
+        String workingGender = gender.toLowerCase();
+        int numberOfFiles = 0;
+        int totalOfRanks = 0;
+        for(File f : dr.selectedFiles()) {
+            numberOfFiles++;
+            int year = Integer.parseInt(f.getName().substring(3, 7));
+            int fileRank = getRank(year, workingName, workingGender);
+            if(fileRank != -1) {
+                totalOfRanks += fileRank;
+            }
+        }
+        if(numberOfFiles != 0) return (double) totalOfRanks / numberOfFiles;
+        else return -1.0;
+    }
 }

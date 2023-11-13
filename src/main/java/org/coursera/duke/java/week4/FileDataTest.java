@@ -51,4 +51,18 @@ public class FileDataTest {
         System.out.println("Ethan was most popular in " + yearOfHighestRank("Ethan", "M") + " year");
         // Ethan was most popular in 2012 year
     }
+
+    public static void testGetAverageRank() {
+        double result = getAverageRank("Mason", "M");
+        if(result == 3.0) System.out.println("Passed: Mason's average rank calculated correctly: " + result);
+        else System.out.println("Failed: FileData.getAverageRank() failed to calculate Mason's average rank correctly: " + result);
+
+        result = getAverageRank("Jacob", "M");
+        if(result == (double) 8/3) System.out.println("Passed: Jacob's average rank calculated correctly: " + result);
+        else System.out.println("Failed: FileData.getAverageRank() failed to calculate Jacob's average rank correctly: " + result);
+
+        result = getAverageRank("Sophia", "F");
+        if(result == (double) 5/3) System.out.println("Passed: Sophia's average rank calculated correctly: " + result);
+        else System.out.println("Failed: FileData.getAverageRank() failed to calculate Sophia's average rank correctly: " + result);
+    }
 }
