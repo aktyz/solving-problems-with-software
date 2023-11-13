@@ -38,4 +38,17 @@ public class FileDataTest {
     public static void testWhatIsNameInYear() {
         whatIsNameInYear("Isabella",2012, 2014, "F");
     }
+
+    public static void testYearOfHighestRank() {
+        System.out.println("Mason was most popular in " + yearOfHighestRank("Mason", "M") + " year");
+        // Mason was most popular in 2012 year
+        System.out.println("Sophia was most popular in " + yearOfHighestRank("Sophia", "F") + " year");
+        // Sophia was most popular in 2012 year
+        System.out.println("Zyta was most popular in " + yearOfHighestRank("Zyta", "F") + " year");
+        // Zyta was most popular in -1 year
+        System.out.println("Liam was most popular in " + yearOfHighestRank("Liam", "M") + " year");
+        // Liam was most popular in 2013 year
+        System.out.println("Ethan was most popular in " + yearOfHighestRank("Ethan", "M") + " year");
+        // Ethan was most popular in 2012 year
+    }
 }

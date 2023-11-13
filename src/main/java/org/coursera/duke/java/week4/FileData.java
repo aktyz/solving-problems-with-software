@@ -1,8 +1,11 @@
 package org.coursera.duke.java.week4;
 
+import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
+import java.io.File;
 
 public class FileData {
 
@@ -104,17 +107,7 @@ public class FileData {
         FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
         String workingName = name.toLowerCase();
         String workingGender = gender.toLowerCase();
-        int numberOfNames = 0;
-        switch (workingGender) {
-            case FEMALE:
-                numberOfNames = getNumberOfFemaleNames(fr);
-                break;
-            case MALE:
-                numberOfNames = getNumberOfMaleNames(fr);
-                break;
-            default:
-                return -1;
-        }
+        int numberOfNames = getNumberOfNames(workingGender, fr);
         int rank = 0;
         for (CSVRecord line : fr.getCSVParser(false)) {
             String recordName = line.get(0).toLowerCase();
@@ -126,20 +119,22 @@ public class FileData {
         return rank == 0 ? -1 : rank;
     }
 
+    private static int getNumberOfNames(String workingGender, FileResource fr) {
+        switch (workingGender) {
+            case FEMALE:
+                return getNumberOfFemaleNames(fr);
+            case MALE:
+                return getNumberOfMaleNames(fr);
+            default:
+                return -1;
+        }
+    }
+
     public static String getName(int year, int rank, String gender) {
         FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
         String workingGender = gender.toLowerCase();
-        int numberOfNames = 0;
-        switch (workingGender) {
-            case FEMALE:
-                numberOfNames = getNumberOfFemaleNames(fr);
-                break;
-            case MALE:
-                numberOfNames = getNumberOfMaleNames(fr);
-                break;
-            default:
-                return "NO NAME";
-        }
+        if(!workingGender.equals(FEMALE) || !workingGender.equals(MALE)) return "NO NAME";
+        int numberOfNames = getNumberOfNames(workingGender, fr);
         if(rank <= numberOfNames) {
             int fileRank = 0;
             for (CSVRecord line : fr.getCSVParser(false)) {
@@ -161,5 +156,27 @@ public class FileData {
         String sheHe = gender.toLowerCase().equals(FEMALE) ? "she" : "he";
 
         System.out.println(name + " born in " + year + " would be " + newYearName + " if " + sheHe + " was born in " + newYear);
+    }
+
+    public static int yearOfHighestRank(String name, String gender) {
+        DirectoryResource dr = new DirectoryResource();
+        int highestRanking = -1;
+        int yearOfHighestRank = -1;
+        String workingName = name.toLowerCase();
+        String workingGender = gender.toLowerCase();
+
+        for(File f : dr.selectedFiles()) {
+            int year = Integer.parseInt(f.getName().substring(3, 7));
+            int currentRanking = getRank(year, workingName, workingGender);
+            if (currentRanking == -1) continue;
+            else if(highestRanking == -1) {
+                highestRanking = currentRanking;
+                yearOfHighestRank = year;
+            } else if (currentRanking < highestRanking) {
+                highestRanking = currentRanking;
+                yearOfHighestRank = year;
+            }
+        }
+        return yearOfHighestRank;
     }
 }
