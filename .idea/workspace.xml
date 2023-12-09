@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea144e-2f44-40b1-8eb9-b61409253c8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/GrayScaleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/GrayScaleConverterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/ImageSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/GrayScaleConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/GrayScaleConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/coursera/duke/java/week4/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -7,6 +7,8 @@ import edu.duke.Pixel;
 import java.io.File;
 
 public class GrayScaleConverter {
+
+    private static String IMAGES = "/resources/week4/invert_images";
     // Start with the image I want - inImage
     public static ImageResource makeGray(ImageResource inImage) {
         //Make a blank image of the same size
@@ -30,10 +32,17 @@ public class GrayScaleConverter {
 
     public static void selectAndConvert() {
         DirectoryResource dr = new DirectoryResource();
+
         for(File f : dr.selectedFiles()) {
+            // Out of Scope - look for the new images in the root folder of the project
+            //String workingDirectory = System.getProperty("user.dir");
+            //System.out.println(workingDirectory);
             ImageResource inImage = new ImageResource(f);
             ImageResource gray = makeGray(inImage);
-            gray.draw();
+            String fName = inImage.getFileName();
+            String newName = "gray-" + fName;
+            gray.setFileName(newName);
+            gray.save();
         }
     }
 }
