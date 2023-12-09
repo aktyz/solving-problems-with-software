@@ -553,5 +553,36 @@ Isabella born in 2012 would be Sophia if she was born in 2014.
 ```
 - [x] Write the method `yearOfHighestRank` that has two parameters: a `String name`, and a `string` named `gender` (`F` for female and `M` for male). This method selects a range of files to process and returns an `integer`, the year with the highest rank for the name and gender. If the name and gender are not in any of the selected files, it should return `-1`. For example, calling `yearOfHighestRank` with name `Mason` and gender `M` and selecting the three test files above results in returning the year `2012`. That is because `Mason` was ranked the 2nd most popular name in 2012, ranked 4th in 2013 and ranked 3rd in 2014. His highest ranking was in 2012.
 - [x] Write the method `getAverageRank` that has two parameters: a `String name`, and a `string` named `gender` (`F` for female and `M` for male). This method selects a range of files to process and returns a `double` representing the average rank of the name and gender over the selected files. It should return `-1.0` if the name is not ranked in any of the selected files. For example calling `getAverageRank` with name `Mason` and gender `M` and selecting the three test files above results in returning `3.0`, as he is rank 2 in the year 2012, rank 4 in 2013 and rank 3 in 2014.  As another example, calling `getAverageRank` with name `Jacob` and gender `M` and selecting the three test files above results in returning `2.66`.
-- [ ] Write the method `getTotalBirthsRankedHigher` that has three parameters: an `integer` named `year`, a `string` named `name`, and a `string` named `gender` (`F` for female and `M` for male). This method returns an `integer`, the total number of births of those names with the same gender and same year who are ranked higher than name. For example, if `getTotalBirthsRankedHigher` accesses the `yob2012short.csv` file with name set to `Ethan`, gender set to `M`, and year set to `2012`, then this method should return `15`, since `Jacob` has 8 births and `Mason` has 7 births, and those are the only two ranked higher than Ethan.
+- [x] Write the method `getTotalBirthsRankedHigher` that has three parameters: an `integer` named `year`, a `string` named `name`, and a `string` named `gender` (`F` for female and `M` for male). This method returns an `integer`, the total number of births of those names with the same gender and same year who are ranked higher than name. For example, if `getTotalBirthsRankedHigher` accesses the `yob2012short.csv` file with name set to `Ethan`, gender set to `M`, and year set to `2012`, then this method should return `15`, since `Jacob` has 8 births and `Mason` has 7 births, and those are the only two ranked higher than Ethan.
+
+Here are some optional ideas to extend your program even further:
+
+**Test edge cases.** 'Edge cases' refer to special situations where a program might break down. For example, consider searching for names that don't exist at all on the list of baby names provided, or only appear in some years but not in others. What happens when you try to find the most popular decade for such a name?
+
+**Use a different set of data.** Does your home country record a similar set of data? Try finding a similar but different set of data and modifying your program to work with it. What changes do you have to make with the new data set? What are the similarities? How might those similarities and differences affect how you would write a program that used data from every country in the world?
+
+**Explore different statistics.** If you wanted to know the median rank for a name over a period of multiple years, rather than the most popular year in that span, how would you write your program? What about finding a list of all the names that were used for fewer than 10 children in a particular year? What about finding the most popular name and year in the entire data set from a short list of your friends and family names? What are your own ideas for discovering interesting facts from this data set?
+
+**Adapt your program to a new problem.** This project focused on reading data from CSV files, which is a common data storage format. Try adapting your baby name program to do something new. For example, you might be a teacher with a gradebook of student test results; you could use your program to find the average scores for each test. Or you might run a business and have accounting records; you could find your most profitable month over the last two years of operation.
+
+## Batch Grayscale Images
+
+### Grayscale Algorithm: Seven-Step Approach
+
+> **Domain Knowledge**
+> What is Grey? -> RGB R = RGB G = RGB B
+> How to convert RGB to grey?
+> - average
+> - weighted average
+> - more complex formula
+> 
+
+Step 1: Work with Small Instance By Hand -> work with 2x2 pixel image <br>
+Step 2: Write down the steps <br>
+Step 3: Find patterns and generalize <br>
+Step 4: Test algorithm on another small example -> work with 3 pixel image <br>
+Step 5: Translate to Code <br>
+Step 6: Run test cases <br>
+Step 7: Debug failed test cases <br>
+
 
