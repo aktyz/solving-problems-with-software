@@ -7,8 +7,6 @@ import edu.duke.Pixel;
 import java.io.File;
 
 public class GrayScaleConverter {
-
-    private static String IMAGES = "/resources/week4/invert_images";
     // Start with the image I want - inImage
     public static ImageResource makeGray(ImageResource inImage) {
         //Make a blank image of the same size
