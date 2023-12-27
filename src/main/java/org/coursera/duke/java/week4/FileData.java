@@ -12,6 +12,8 @@ public class FileData {
     public static final String FEMALE = "f";
     public static final String MALE = "m";
     public static final String TEST_DATA_LOCALISATION = "resources/week4/us_babynames_test/";
+
+    public static final String BABYNAMES_BY_YEAR = "resources/week4/us_babynames_by_year/";
     public CSVParser readOneFile(int year) {
         String fileName = "yob" + year + "short.txt";
         FileResource fr = new FileResource(TEST_DATA_LOCALISATION + fileName);
@@ -104,22 +106,30 @@ public class FileData {
     }
 
     public static int getRank(int year, String name, String gender) {
-        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        FileResource fr = new FileResource(BABYNAMES_BY_YEAR + "yob" + year + ".csv");
+        CSVParser parser = fr.getCSVParser(false);
         String workingName = name.toLowerCase();
         String workingGender = gender.toLowerCase();
-        int numberOfNames = getNumberOfNames(workingGender, fr);
+        int numberOfNamesForWorkingGender = getNumberOfNamesByGender(workingGender, fr);
         int rank = 0;
-        for (CSVRecord line : fr.getCSVParser(false)) {
-            String recordName = line.get(0).toLowerCase();
-            String recordGender = line.get(1).toLowerCase();
-            if (recordGender.equals(workingGender) && rank < numberOfNames) rank++;
-            if(recordName.equals(workingName)) break;
+
+        String lineGender = null;
+        String lineName = null;
+
+        for (CSVRecord line : parser) {
+            lineGender = line.get(1).toLowerCase();
+            lineName = line.get(0).toLowerCase();
+            if(rank <= numberOfNamesForWorkingGender && lineGender.equals(workingGender)) {
+                rank ++;
+                if(lineName.equals(workingName))
+                    return rank;
+            }
         }
-        if(rank == numberOfNames) return -1;
+        if(rank == numberOfNamesForWorkingGender) return -1;
         return rank == 0 ? -1 : rank;
     }
 
-    private static int getNumberOfNames(String workingGender, FileResource fr) {
+    public static int getNumberOfNamesByGender(String workingGender, FileResource fr) {
         switch (workingGender) {
             case FEMALE:
                 return getNumberOfFemaleNames(fr);
@@ -131,17 +141,18 @@ public class FileData {
     }
 
     public static String getName(int year, int rank, String gender) {
-        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        FileResource fr = new FileResource(BABYNAMES_BY_YEAR + "yob" + year + ".csv");
         String workingGender = gender.toLowerCase();
-        if(!workingGender.equals(FEMALE) || !workingGender.equals(MALE)) return "NO NAME";
-        int numberOfNames = getNumberOfNames(workingGender, fr);
-        if(rank <= numberOfNames) {
-            int fileRank = 0;
-            for (CSVRecord line : fr.getCSVParser(false)) {
-                String recordGender = line.get(1).toLowerCase();
-                if (recordGender.equals(workingGender) && fileRank < numberOfNames) fileRank++;
-                if (fileRank == rank) {
-                    return line.get(0);
+        if(workingGender.equals(FEMALE) || workingGender.equals(MALE)) {
+            int numberOfNames = getNumberOfNamesByGender(workingGender, fr);
+            if(rank <= numberOfNames) {
+                int fileRank = 0;
+                for (CSVRecord line : fr.getCSVParser(false)) {
+                    String recordGender = line.get(1).toLowerCase();
+                    if (recordGender.equals(workingGender) && fileRank < numberOfNames) fileRank++;
+                    if (fileRank == rank) {
+                        return line.get(0);
+                    }
                 }
             }
         }
@@ -200,7 +211,7 @@ public class FileData {
 
     public static int getTotalBirthsRankedHigher(int year, String name, String gender) {
         int totalBirthsRankedHigher = 0;
-        FileResource fr = new FileResource(TEST_DATA_LOCALISATION + "yob" + year + "short.csv");
+        FileResource fr = new FileResource(BABYNAMES_BY_YEAR + "yob" + year + ".csv");
         String workingName = name.toLowerCase();
         String workingGender = gender.toLowerCase();
         for (CSVRecord line : fr.getCSVParser(false)) {

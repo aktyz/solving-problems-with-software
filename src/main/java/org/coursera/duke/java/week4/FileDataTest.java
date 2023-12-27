@@ -19,6 +19,13 @@ public class FileDataTest {
         result = getRank(2012, "Mason", "Z");
         if(result == -1) System.out.println("Passed: correctly identified wrong function input");
         else System.out.println("Failed: FileData.getRank() will fail due to the wrong function input not identified");
+
+
+        /** Test cases to add:
+         * getRank(1971,"Frank", "m").equals(54) is true - there's girl name Frank in this year that breaks the algorithm
+         * String girl350in1980 = getName(1980, 350, "f"); - should equal to MIA (?), returns "NO NAME"
+         * String boy450in1982 = getName(1982, 450, "m"); - returns "NO NAME"
+         * */
     }
 
     public static void testGetName() {

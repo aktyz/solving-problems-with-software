@@ -609,9 +609,9 @@ For example, see the original and inverted images of Robert:
 <br><br>
 To tackle this problem:
 
-- [ ] First think about how to create a new image that is the inverse of another image.
-- [ ] art by solving an example by hand, write down the steps, find patterns and then test the algorithm
-- [ ] Then create a new BlueJ class called BatchInversions. In this class create a method named makeInversion that has one parameter, an image, and returns a new image that is the inverse of the original image.
-- [ ] Then add another method called selectAndConvert to handle the batch processing of files. This method allows the user to select several files and display the images. Test this method to make sure it works.
-- [ ] Then modify the selectAndConvert method to save each inverted image as a file with a new filename. Use the old filename and append to the front of it “inverted-”
+- [x] First think about how to create a new image that is the inverse of another image.
+- [x] art by solving an example by hand, write down the steps, find patterns and then test the algorithm
+- [x] Then create a new BlueJ class called BatchInversions. In this class create a method named makeInversion that has one parameter, an image, and returns a new image that is the inverse of the original image.
+- [x] Then add another method called selectAndConvert to handle the batch processing of files. This method allows the user to select several files and display the images. Test this method to make sure it works.
+- [x] Then modify the selectAndConvert method to save each inverted image as a file with a new filename. Use the old filename and append to the front of it “inverted-”
 
